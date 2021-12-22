@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://gitee.com/liumuye666/blog.git/blog/2021/12/21/111/">
+  <link rel="canonical" href="https://gitee.com/liumuye666/blog.git/blog/2021/12/21/面试题/">
   <title>
     
-      111 - 始
+      面试题 - 始
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -352,19 +352,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/blog/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/blog/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: url('/blog/img/header_img/404_bg.jpg');
+      --intro-header-background-image-url-page: url('/blog//blog/img/header_img/404_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/blog/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/blog/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/blog/img/header_img/404_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/blog//blog/img/header_img/404_bg.jpg');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url(''); */
+        /* background-image: url('/blog/img/header_img/404_bg.jpg'); */
       
     }
 
@@ -389,8 +389,12 @@
           <div class="post-heading">
             <div class="tags">
               
+              <a class="tag" href="/blog/tags/#Vue" title="Vue">Vue</a>
+              
+              <a class="tag" href="/blog/tags/#Js" title="Js">Js</a>
+              
             </div>
-            <h1>111</h1>
+            <h1>面试题</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               发表于
@@ -402,11 +406,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              预计阅读时间 <span class="post-count">1</span> 分钟
+              预计阅读时间 <span class="post-count">2</span> 分钟
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              共 <span class="post-count">0</span> 字
+              共 <span class="post-count">550</span> 字
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -468,19 +472,38 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        
+        <h2 id="1-判断数据类型的方法🌟🌟🌟🌟🌟">1.判断数据类型的方法🌟🌟🌟🌟🌟</h2>
+<ol>
+<li>typeof(缺点typeof ull的值为Object,无法分辨是null还是Object)</li>
+<li>instanceof(只能判断对象是否存在于目标对象的原型链上)</li>
+<li>constructor</li>
+<li>Object.prototype.toString.call()<br>
+一种最好的基本类型检测方式 Object.prototype.toString.call() ;它可以区分 null 、 string 、<br>
+boolean 、 number 、 undefined 、 array 、 function 、 object 、 date 、 math 数据类型。<br>
+缺点：不能细分为谁谁的实例</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// -----------------------------------------typeof</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span> <span class="comment">// &#x27;undefined&#x27; </span></span><br><span class="line"><span class="keyword">typeof</span> <span class="string">&#x27;10&#x27;</span> <span class="comment">// &#x27;String&#x27; </span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">10</span> <span class="comment">// &#x27;Number&#x27; </span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">false</span> <span class="comment">// &#x27;Boolean&#x27; </span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Symbol</span>() <span class="comment">// &#x27;Symbol&#x27; </span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Function</span> <span class="comment">// ‘function&#x27; </span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span> <span class="comment">// ‘Object’ </span></span><br><span class="line"><span class="keyword">typeof</span> [] <span class="comment">// &#x27;Object&#x27; </span></span><br><span class="line"><span class="keyword">typeof</span> &#123;&#125; <span class="comment">// &#x27;Object&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// -----------------------------------------instanceof</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123; &#125;</span><br><span class="line"><span class="keyword">var</span> f1 = <span class="keyword">new</span> Foo();</span><br><span class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(f1 <span class="keyword">instanceof</span> Foo);<span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(d <span class="keyword">instanceof</span> <span class="built_in">Number</span>); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> <span class="keyword">instanceof</span> <span class="built_in">Number</span>); <span class="comment">//false   --&gt;不能判断字面量的基本数据类型</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// -----------------------------------------constructor</span></span><br><span class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">var</span> e = <span class="number">1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;ming&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/[hbc]at/gi</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(e.constructor);<span class="comment">//ƒ Number() &#123; [native code] &#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(e.constructor.name);<span class="comment">//Number</span></span><br><span class="line"><span class="built_in">console</span>.log(fn.constructor.name) <span class="comment">// Function </span></span><br><span class="line"><span class="built_in">console</span>.log(date.constructor.name)<span class="comment">// Date </span></span><br><span class="line"><span class="built_in">console</span>.log(arr.constructor.name) <span class="comment">// Array </span></span><br><span class="line"><span class="built_in">console</span>.log(reg.constructor.name) <span class="comment">// RegExp</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//-----------------------------------------Object.prototype.toString.call()</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>)); <span class="comment">// &quot;[object Undefined]&quot; </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>)); <span class="comment">// &quot;[object Null]&quot; </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="number">123</span>)); <span class="comment">// &quot;[object Number]&quot; </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="string">&quot;abc&quot;</span>)); <span class="comment">// &quot;[object String]&quot; </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>)); <span class="comment">// &quot;[object Boolean]&quot; </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;ming&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/[hbc]at/gi</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(fn));<span class="comment">// &quot;[object Function]&quot; </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(date));<span class="comment">// &quot;[object Date]&quot; </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(arr)); <span class="comment">// &quot;[object Array]&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(reg));<span class="comment">// &quot;[object RegExp]&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="2-instanceof原理🌟🌟🌟🌟🌟">2.instanceof原理🌟🌟🌟🌟🌟</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myInstance</span>(<span class="params">L, R</span>) </span>&#123;<span class="comment">//L代表instanceof左边，R代表右边</span></span><br><span class="line">     <span class="keyword">var</span> RP = R.prototype</span><br><span class="line">     <span class="keyword">var</span> LP = L.__proto__</span><br><span class="line">     <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">       <span class="keyword">if</span>(LP == <span class="literal">null</span>) &#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span>(LP == RP) &#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">       &#125;</span><br><span class="line">       LP = LP.__proto__</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="built_in">console</span>.log(myInstance(&#123;&#125;,<span class="built_in">Object</span>));</span><br></pre></td></tr></table></figure>
+<h2 id="3-为什么typeof-null是Objec🌟🌟🌟🌟">3.为什么typeof null是Objec🌟🌟🌟🌟</h2>
+<p>因为在JavaScript中，<code>不同的对象都是使用二进制存储的</code>，如果二进制前三位都是0的话，系统会判断为是Object类型，而null的二进制全是0，自然也就判断为Object</p>
+<p>这个bug是初版本的JavaScript中留下的，扩展一下其他五种标识位：</p>
+<blockquote>
+<p>000 对象<br>
+1 整型<br>
+010 双精度类型<br>
+100字符串<br>
+110布尔类型</p>
+</blockquote>
+
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/blog/2021/12/22/title-md/" data-toggle="tooltip" data-placement="top" title=":title.md">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/blog/2021/12/21/我的第一篇文章/" data-toggle="tooltip" data-placement="top" title="我的第一篇文章">Next Post &rarr;</a>
+            <a href="/blog/2021/12/21/数组的所有方法/" data-toggle="tooltip" data-placement="top" title="数组的所有方法">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -529,7 +552,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=111&body=Hi,I found this website and thought you might like it https://gitee.com/liumuye666/blog.git/blog/2021/12/21/111/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=面试题&body=Hi,I found this website and thought you might like it https://gitee.com/liumuye666/blog.git/blog/2021/12/21/面试题/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -564,7 +587,7 @@
       repo: '',
       owner: '',
       admin: '',
-      id: 'Tue Dec 21 2021 22:06:46 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Tue Dec 21 2021 21:20:50 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -617,7 +640,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%B9%E6%B3%95%F0%9F%8C%9F%F0%9F%8C%9F%F0%9F%8C%9F%F0%9F%8C%9F%F0%9F%8C%9F"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1.判断数据类型的方法🌟🌟🌟🌟🌟</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-instanceof%E5%8E%9F%E7%90%86%F0%9F%8C%9F%F0%9F%8C%9F%F0%9F%8C%9F%F0%9F%8C%9F%F0%9F%8C%9F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2.instanceof原理🌟🌟🌟🌟🌟</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-%E4%B8%BA%E4%BB%80%E4%B9%88typeof-null%E6%98%AFObjec%F0%9F%8C%9F%F0%9F%8C%9F%F0%9F%8C%9F%F0%9F%8C%9F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3.为什么typeof null是Objec🌟🌟🌟🌟</span></a></li></ol>
         
         </div>
       </aside>
@@ -639,6 +662,10 @@
             <a href="/blog/tags/">特色标签</a>
           </h5>
           <div class="tags">
+            
+            <a class="tag" href="/blog/tags/#Vue" title="Vue">Vue</a>
+            
+            <a class="tag" href="/blog/tags/#Js" title="Js">Js</a>
             
           </div>
         </section>
