@@ -2,56 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite-url/categories/index.html</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/categories/index.html</loc>
     
     <lastmod>2021-12-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/undefined/111/</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/undefined/111/</loc>
     
     <lastmod>2021-12-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/undefined/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/undefined/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</loc>
     
     <lastmod>2021-12-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/index.html</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/tags/index.html</loc>
     
     <lastmod>2021-12-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/404.html</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/404.html</loc>
     
     <lastmod>2021-12-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/cn/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/cn/Hexo-Theme-LiveMyLife/</loc>
     
     <lastmod>2020-04-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/archive/index.html</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/archive/index.html</loc>
     
     <lastmod>2017-03-20</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/about/index.html</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/about/index.html</loc>
     
     <lastmod>2016-04-20</lastmod>
     
@@ -59,7 +59,7 @@
   
 
   <url>
-    <loc>http://yoursite-url/</loc>
+    <loc>https://gitee.com/liumuye666/blog.git</loc>
     <lastmod>2021-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -67,14 +67,14 @@
 
   
   <url>
-    <loc>http://yoursite-url/tags/Vue/</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/tags/Vue/</loc>
     <lastmod>2021-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/tags/Hexo-Theme-LiveMyLife/</loc>
     <lastmod>2021-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -83,14 +83,14 @@
 
   
   <url>
-    <loc>http://yoursite-url/categories/Vue/</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/categories/Vue/</loc>
     <lastmod>2021-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://gitee.com/liumuye666/blog.git/categories/Hexo-Theme-LiveMyLife/</loc>
     <lastmod>2021-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
