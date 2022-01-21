@@ -289,6 +289,17 @@
           
           
           
+          
+          <li>
+            <a href="/blog/favorites/">
+              
+              收藏夹
+              
+              
+            </a>
+          </li>
+          
+          
 
           
           <li>
@@ -487,10 +498,12 @@
     </h3>
     <div class="post-content-preview">
       判断数据类型的方法🌟🌟🌟🌟🌟
+
 typeof(缺点typeof ull的值为Object,无法分辨是null还是Object)
 instanceof(只能判断对象是否存在于目标对象的原型链上)
 constructor
-Object.prototype.toString.call()一种最好的基本类型检测方式 Object.prototype.toString.call() ;它可以区......
+Object.prototype.toString.call()
+一种最好的基本类型检测方式 Object.prototype.toString.call() ;它可......
     </div>
   </a>
   
@@ -1242,5 +1255,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
