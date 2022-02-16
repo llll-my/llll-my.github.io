@@ -150,7 +150,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -184,7 +184,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -539,12 +539,7 @@ Object.prototype.toString.call()
     </h3>
     <div class="post-content-preview">
       
-computed和watch的区别
-1.computed能完成的功能,watch都可以完成。
-2.watch能完成的功能,watch不一定能完成,例如:watch可以进行异步操作(setTimeout).
-两个重要的小原则
-1.所被Vue管理的函数，最好写成普通函数，这样this的指向才是vm或组件实例对象。
-2.所有不被vue所管理的函数(定时器的回调函数、ajax的回调函数等、prom......
+computed和watch的区别1.computed能完成的功能,watch都可以完成。2.watch能完成的功能,computed不一定能完成,例如:watch可以进行异步操作(setTimeout).两个重要的小原则1.所被Vue管理的函数，最好写成普通函数，这样this的指向才是vm或组件实例对象。2.所有不被vue所管理的函数(定时器的回调函数、ajax的回调函数等、promis......
     </div>
   </a>
   
