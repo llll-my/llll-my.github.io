@@ -118,11 +118,6 @@
     
 
     
-      <!-- gitalk start -->
-      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
-      <link rel="stylesheet" href="/blog/css/gitalk.css"/>
-      <!-- gitalk end -->
-    
   
 
   <!-- Custom Fonts -->
@@ -206,16 +201,6 @@
 		
 
 		<!-- Gitter -->
-		
-		<!-- Gitter -->
-<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-    room: 'your-community/your-room'
-  };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
 		
 
 		<!-- Navigation (contains search)-->
@@ -496,12 +481,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/blog/2022/02/11/watch和computed的区别/" data-toggle="tooltip" data-placement="top" title="watch和computed的区别">&larr; Previous Post</a>
+            <a href="/blog/2022/02/11/watch和computed的区别/" data-toggle="tooltip" data-placement="top" title="watch和computed的区别">&larr; 上一篇</a>
           </li>
           
           
           <li class="next">
-            <a href="/blog/2021/12/21/数组的所有方法/" data-toggle="tooltip" data-placement="top" title="数组的所有方法">Next Post &rarr;</a>
+            <a href="/blog/2021/12/21/数组的所有方法/" data-toggle="tooltip" data-placement="top" title="数组的所有方法">下一篇 &rarr;</a>
           </li>
           
         </ul>
@@ -567,56 +552,6 @@
 
         <!-- comments start -->
         <!-- 1. gitalk comment -->
-
-  <!-- gitalk start -->
-  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
-
-  <div id="gitalk-container"></div>
-
-  
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
-    <script src="/blog/js/comment/gitalk.js"></script>
-  
-
-  <script>
-    var gitalk = new Gitalk({
-      clientID: '',
-      clientSecret: '',
-      repo: '',
-      owner: '',
-      admin: '',
-      id: 'Mon Jan 17 2022 10:02:53 GMT+0800', // Ensure uniqueness and length less than 50
-      distractionFreeMode: false, // Facebook-like distraction free mode
-      perPage: 10,
-      pagerDirection: 'last',
-      createIssueManually: false,
-      language: 'en',
-      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
-    });
-    gitalk.render('gitalk-container');
-
-    var gtFolded = () => {
-      setTimeout(function () {
-        let markdownBody = document.getElementsByClassName("markdown-body");
-        let list = Array.from(markdownBody);
-        list.forEach(item => {
-          if (item.clientHeight > 250) {
-            item.classList.add('gt-comment-body-folded');
-            item.style.maxHeight = '250px';
-            item.title = 'Click to Expand';
-            item.onclick = function () {
-              item.classList.remove('gt-comment-body-folded');
-              item.style.maxHeight = '';
-              item.title = '';
-              item.onclick = null;
-            };
-          }
-        })
-      }, 800);
-    }
-  </script>
-
-  <!-- gitalk end -->
 
 
 <!-- 2. gitment comment -->
@@ -836,7 +771,7 @@
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="/blog/js/mouseclick.js" content='❤️‍🔥,❤️‍🔥,❤️‍🔥,❤️‍🔥,❤️‍🔥' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+    <script type="text/javascript" src="/blog/js/mouseclick.js" content='虎年大吉❤️‍🔥,虎虎生威❤️‍🔥,如虎添翼❤️‍🔥,龙腾虎跃❤️‍🔥,龙吟虎啸❤️‍🔥' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
   
 
   
@@ -859,7 +794,12 @@
   
 
   <!-- viewer end -->
+  <!-- 回到顶部 -->
 
+<!-- <div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+  <a title="返回顶部"><img src="/img/imgs/mvvm.png"/></a>
+  </div> -->
+<script src="/blog/js/totop.js"></script>
 
 <script>
   // async load function
