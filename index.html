@@ -483,10 +483,12 @@
     </h3>
     <div class="post-content-preview">
       判断数据类型的方法🌟🌟🌟🌟🌟
+
 typeof(缺点typeof ull的值为Object,无法分辨是null还是Object)
 instanceof(只能判断对象是否存在于目标对象的原型链上)
 constructor
-Object.prototype.toString.call()一种最好的基本类型检测方式 Object.prototype.toString.call() ;它可以区......
+Object.prototype.toString.call()
+一种最好的基本类型检测方式 Object.prototype.toString.call() ;它可......
     </div>
   </a>
   
@@ -522,7 +524,12 @@ Object.prototype.toString.call()一种最好的基本类型检测方式 Object.p
     </h3>
     <div class="post-content-preview">
       
-computed和watch的区别1.computed能完成的功能,watch都可以完成。2.watch能完成的功能,computed不一定能完成,例如:watch可以进行异步操作(setTimeout).两个重要的小原则1.所被Vue管理的函数，最好写成普通函数，这样this的指向才是vm或组件实例对象。2.所有不被vue所管理的函数(定时器的回调函数、ajax的回调函数等、promis......
+computed和watch的区别
+1.computed能完成的功能,watch都可以完成。
+2.watch能完成的功能,computed不一定能完成,例如:watch可以进行异步操作(setTimeout).
+两个重要的小原则
+1.所被Vue管理的函数，最好写成普通函数，这样this的指向才是vm或组件实例对象。
+2.所有不被vue所管理的函数(定时器的回调函数、ajax的回调函数等、p......
     </div>
   </a>
   
@@ -625,10 +632,11 @@ https://www.cnblogs.com/wangjiachen666/p/9876266.html
       
     </h3>
     <div class="post-content-preview">
-      一个重要的内置关系：VueComponent.prototype.__proto__==Vue.prototype让组件实例（vc)可以访问到vue原型对象上的属性,方法。
+      一个重要的内置关系：VueComponent.prototype.__proto__==Vue.prototype
+让组件实例（vc)可以访问到vue原型对象上的属性,方法。
 
 
-Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐式原型对象指向Object的原型对象，而是把它修改，指向了Vue的原型对象。这样就可以让组件实例对象（vc）可以访问到Vue原型对象上的属性，方......
+Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐式原型对象指向Object的原型对象，而是把它修改，指向了Vue的原型对象。这样就可以让组件实例对象（vc）可以访问到Vue原型对象上的属性，......
     </div>
   </a>
   
@@ -978,7 +986,7 @@ ht......
   <!-- Custom Theme JavaScript -->
   <script type="text/javascript" src="/blog/js/hux-blog.min.js"></script>
   <!-- catalog -->
-  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <script async="true" type="text/javascript" src="/blog/js/catalog.js"></script>
   <!-- totop(rocket) -->
   <script async="true" type="text/javascript" src="/js/totop.js"></script>
 
