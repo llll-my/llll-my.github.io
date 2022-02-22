@@ -562,7 +562,11 @@ computed和watch的区别
       
     </h3>
     <div class="post-content-preview">
-      vue.js是完整版的vue，包含：核心功能+模版解析器vue.runtime.xxx.js是运行版的vue只包含：核心功能，没有模版解析器vue.runtime.xxx.js体积更小！因为vue.runtime.xxx.js没有模版解析器,所以不能使用template配置项,需要使用render函数接收到的createElement函数去指定具体内容12345678910// 创建Vue实......
+      vue.js是完整版的vue，包含：核心功能+模版解析器
+vue.runtime.xxx.js是运行版的vue只包含：核心功能，没有模版解析器
+vue.runtime.xxx.js体积更小！
+因为vue.runtime.xxx.js没有模版解析器,所以不能使用template配置项,需要使用render函数接收到的createElement函数去指定具体内容
+12345678910// 创建......
     </div>
   </a>
   
@@ -632,11 +636,10 @@ https://www.cnblogs.com/wangjiachen666/p/9876266.html
       
     </h3>
     <div class="post-content-preview">
-      一个重要的内置关系：VueComponent.prototype.__proto__==Vue.prototype
-让组件实例（vc)可以访问到vue原型对象上的属性,方法。
+      一个重要的内置关系：VueComponent.prototype.__proto__==Vue.prototype让组件实例（vc)可以访问到vue原型对象上的属性,方法。
 
 
-Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐式原型对象指向Object的原型对象，而是把它修改，指向了Vue的原型对象。这样就可以让组件实例对象（vc）可以访问到Vue原型对象上的属性，......
+Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐式原型对象指向Object的原型对象，而是把它修改，指向了Vue的原型对象。这样就可以让组件实例对象（vc）可以访问到Vue原型对象上的属性，方......
     </div>
   </a>
   
