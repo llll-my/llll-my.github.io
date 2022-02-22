@@ -23,6 +23,27 @@
   </url>
   
   <url>
+    <loc>https://gitee.com/liumuye666/blog.git/2022/02/11/vue.js%E4%B8%8Evue.runtime.xxx.js%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    
+    <lastmod>2022-02-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gitee.com/liumuye666/blog.git/2022/02/11/vue%E4%B8%AD%E7%BB%84%E4%BB%B6%E7%9A%84data%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/</loc>
+    
+    <lastmod>2022-02-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gitee.com/liumuye666/blog.git/2022/02/11/vue%E4%B8%AD%E4%B8%80%E4%B8%AA%E9%87%8D%E8%A6%81%E7%9A%84%E5%86%85%E7%BD%AE%E5%85%B3%E7%B3%BB/</loc>
+    
+    <lastmod>2022-02-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gitee.com/liumuye666/blog.git/tags/index.html</loc>
     
     <lastmod>2022-01-24</lastmod>
@@ -74,7 +95,7 @@
 
   <url>
     <loc>https://gitee.com/liumuye666/blog.git</loc>
-    <lastmod>2022-02-18</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -82,14 +103,14 @@
   
   <url>
     <loc>https://gitee.com/liumuye666/blog.git/tags/Vue/</loc>
-    <lastmod>2022-02-18</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://gitee.com/liumuye666/blog.git/tags/Js/</loc>
-    <lastmod>2022-02-18</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -98,21 +119,21 @@
   
   <url>
     <loc>https://gitee.com/liumuye666/blog.git/categories/Vue/</loc>
-    <lastmod>2022-02-18</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://gitee.com/liumuye666/blog.git/categories/Js/</loc>
-    <lastmod>2022-02-18</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://gitee.com/liumuye666/blog.git/categories/Js/Vue/</loc>
-    <lastmod>2022-02-18</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

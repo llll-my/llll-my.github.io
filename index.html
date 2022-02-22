@@ -547,6 +547,112 @@ computed和watch的区别1.computed能完成的功能,watch都可以完成。2.w
   <!-- top end -->
   
 
+  <a href="/blog/2022/02/11/vue.js与vue.runtime.xxx.js的区别/">
+    <h2 class="post-title">
+      vue.js与vue.runtime.xxx.js的区别
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      vue.js是完整版的vue，包含：核心功能+模版解析器vue.runtime.xxx.js是运行版的vue只包含：核心功能，没有模版解析器vue.runtime.xxx.js体积更小！因为vue.runtime.xxx.js没有模版解析器,所以不能使用template配置项,需要使用render函数接收到的createElement函数去指定具体内容12345678910// 创建Vue实......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-11
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/blog/2022/02/11/vue中组件的data为什么是一个函数/">
+    <h2 class="post-title">
+      vue中组件的data为什么是一个函数
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      组件是可复用的,一个组件被创建好之后,就可能被用在多个地方,组件不管复用多少次,组件中的data数据都应该是相互隔离的,互不影响，基于这一理念，组件每复用一次，data就复制一份,之后，当某一处复用的地方组件内data数据改变时，其他复用地方的组件data数据不受影响.
+
+https://www.cnblogs.com/wangjiachen666/p/9876266.html
+
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-11
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/blog/2022/02/11/vue中一个重要的内置关系/">
+    <h2 class="post-title">
+      vue中一个重要的内置关系
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      一个重要的内置关系：VueComponent.prototype.__proto__==Vue.prototype让组件实例（vc)可以访问到vue原型对象上的属性,方法。
+
+
+Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐式原型对象指向Object的原型对象，而是把它修改，指向了Vue的原型对象。这样就可以让组件实例对象（vc）可以访问到Vue原型对象上的属性，方......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-11
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/blog/2022/01/17/链接/">
     <h2 class="post-title">
       链接
@@ -658,7 +764,7 @@ ht......
   <div class="tags">
     
     
-    <a href="/blog/tags/#Vue" title="Vue" rel="2">Vue</a>
+    <a href="/blog/tags/#Vue" title="Vue" rel="5">Vue</a>
     
     
     
@@ -715,16 +821,20 @@ ht......
       <li>watch和computed的区别</li>
     </a>
     
+    <a href="2022/02/11/vue.js%E4%B8%8Evue.runtime.xxx.js%E7%9A%84%E5%8C%BA%E5%88%AB/">
+      <li>vue.js与vue.runtime.xxx.js的区别</li>
+    </a>
+    
+    <a href="2022/02/11/vue%E4%B8%AD%E7%BB%84%E4%BB%B6%E7%9A%84data%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/">
+      <li>vue中组件的data为什么是一个函数</li>
+    </a>
+    
+    <a href="2022/02/11/vue%E4%B8%AD%E4%B8%80%E4%B8%AA%E9%87%8D%E8%A6%81%E7%9A%84%E5%86%85%E7%BD%AE%E5%85%B3%E7%B3%BB/">
+      <li>vue中一个重要的内置关系</li>
+    </a>
+    
     <a href="2022/01/17/%E9%93%BE%E6%8E%A5/">
       <li>链接</li>
-    </a>
-    
-    <a href="2021/12/21/%E6%95%B0%E7%BB%84%E7%9A%84%E6%89%80%E6%9C%89%E6%96%B9%E6%B3%95/">
-      <li>数组的所有方法</li>
-    </a>
-    
-    <a href="2021/12/21/%E9%9D%A2%E8%AF%95%E9%A2%98/">
-      <li>面试题</li>
     </a>
     
   </ul>
@@ -749,7 +859,7 @@ ht......
 
 <h5><a href="/blog/archives/">归档</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
 </div>
 
 
