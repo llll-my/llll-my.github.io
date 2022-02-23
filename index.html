@@ -662,31 +662,27 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
   <!-- top end -->
   
 
-  <a href="/blog/2022/01/17/链接/">
+  <a href="/blog/2022/02/11/mixin混入/">
     <h2 class="post-title">
-      链接
+      mixin混入
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      主题链接
-https://gitee.com/V_Vincen/hexo-theme-livemylife
-vue运行机制全局概览
-https://www.kancloud.cn/sllyli/vuejs/1244017
-视频转GIF
-https://www.xunjieshipin.com/video-setgif
-色谱
-http://zhongguose.com/#lusuihui
-ht......
+      可以把多个组件都需要使用的东西配置成一个mixin对象
+
+1.第一步在src&gt;mixin.js(创建js)123456789101112131415161718export const mixin = &#123;  methods: &#123;    showName() &#123;      alert(this.name)    &#125;  &#125;,  mounte......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     发表于
-    2022-01-17
+    2022-02-11
   </p>
   <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
     
   </div>
   
@@ -701,27 +697,128 @@ ht......
   <!-- top end -->
   
 
-  <a href="/blog/2021/12/21/数组的所有方法/">
+  <a href="/blog/2022/02/11/plugins(自定义插件)/">
     <h2 class="post-title">
-      数组的所有方法
+      plugins(自定义插件)
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      一、在JavaScript中创建数组的方法
-(1)、Array构造函数创建数组
-1234var Arr1 = new Array();//创建一个空数组 var Arr2 = new Array(6);//规定了数组长度为6，然后再根据索引向里面添加值   	Arr2[0] = 1; var Arr3 = new Array(&#x27;a&#x27;,&#x27;b&#x27;,&#x27......
+      
+
+1.在src&gt;plugins.js(创建js)12345678910111213141516171819202122232425262728293031323334353637export default &#123;  install(Vue) &#123;    Vue.filter(&#x27;mySlice&#x27;, function (value) &#123;   ......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     发表于
-    2021-12-21
+    2022-02-11
   </p>
   <div class="tags">
     
-    <a href="/blog/tags/#Js" title="Js">Js</a>
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/blog/2022/02/11/vue中关闭eslint语法/">
+    <h2 class="post-title">
+      vue中关闭eslint语法
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      在根目录创建vue.config.js123module.exports = &#123;  lintOnSave:false,//关闭语法检查&#125;
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-11
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/blog/2022/02/11/vue通过props子向父传值/">
+    <h2 class="post-title">
+      vue通过props子向父传值
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      父组件12345678910111213141516171819202122232425&lt;template&gt;  &lt;div id=&quot;root&quot;&gt;    &lt;School :add = &quot;add&quot; /&gt;    &lt;Student /&gt;  &lt;/div&gt;&lt;/template&gt;import Sc......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-11
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/blog/2022/02/11/vue中一些npm命令/">
+    <h2 class="post-title">
+      vue中一些npm命令
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+1.nanoid插件(随机数)12345678910//npm i nanoid安装import &#123;nanoid&#125; from &#x27;nanoid&#x27;export default &#123;  name: &quot;MyHeader&quot;,  data() &#123;    return &#123;      id: nanoid(),//使用......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-11
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
     
   </div>
   
@@ -733,6 +830,10 @@ ht......
   <!-- Pager -->
   <ul class="pager">
     
+    
+    <li class="next">
+      <a href="/blog/archives/2/">下一页 &rarr;</a>
+    </li>
     
   </ul>
 
@@ -773,7 +874,7 @@ ht......
   <div class="tags">
     
     
-    <a href="/blog/tags/#Vue" title="Vue" rel="5">Vue</a>
+    <a href="/blog/tags/#Vue" title="Vue" rel="10">Vue</a>
     
     
     
@@ -842,8 +943,8 @@ ht......
       <li>vue中一个重要的内置关系</li>
     </a>
     
-    <a href="2022/01/17/%E9%93%BE%E6%8E%A5/">
-      <li>链接</li>
+    <a href="2022/02/11/mixin%E6%B7%B7%E5%85%A5/">
+      <li>mixin混入</li>
     </a>
     
   </ul>
@@ -868,7 +969,7 @@ ht......
 
 <h5><a href="/blog/archives/">归档</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
 </div>
 
 
