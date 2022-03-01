@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://gitee.com/liumuye666/blog.git/blog/2022/02/24/vue%E4%B8%ADprops%E8%83%BD%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9/</loc>
+    <lastmod>2022-02-23</lastmod>
+  </url>
+  <url>
     <loc>https://gitee.com/liumuye666/blog.git/blog/2022/02/11/watch%E5%92%8Ccomputed%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     <lastmod>2022-02-11</lastmod>
   </url>

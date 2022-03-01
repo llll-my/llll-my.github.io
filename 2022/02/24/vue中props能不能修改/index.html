@@ -134,10 +134,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://gitee.com/liumuye666/blog.git/blog/archives/2022/01/">
+  <link rel="canonical" href="https://gitee.com/liumuye666/blog.git/blog/2022/02/24/vue中props能不能修改/">
   <title>
     
-      始
+      vue中props能不能修改 - 始
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -296,25 +296,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="archives/2022/01/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -366,19 +348,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/blog/img/tihuan/鲨鱼.jpeg');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/blog/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: url('/blog/img/header_img/tihuan.png');
+      --intro-header-background-image-url-page: url('/blog//blog/img/header_img/tihuan.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/blog/img/tihuan/鲨鱼.jpeg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/blog/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/blog/img/header_img/tihuan.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/blog//blog/img/header_img/tihuan.png');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/blog/img/header_img/archive_bg2.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/blog/img/header_img/tihuan.png'); */
       
     }
 
@@ -400,10 +382,42 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>始</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">说你做的、做你说的</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/blog/tags/#Vue" title="Vue">Vue</a>
+              
+            </div>
+            <h1>vue中props能不能修改</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              发表于
+              2022-02-24
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              预计阅读时间 <span class="post-count">1</span> 分钟
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              共 <span class="post-count">285</span> 字
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              浏览 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -444,390 +458,194 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
+        <p>vue是单向数据流,单向数据流就是从一个组件单方向将数据流向它的内部组件，也就是父组件的数据流向子组件中,但子组件不能将这个数据修改掉,如果返回到父组件中修改然后重新流向子组件，从而达到更新数据的原理<br><img src="https://s2.loli.net/2022/02/24/Q7YMOLvqgnS5ihb.png" alt><br>图中可以看到，父组件向子组件传递数据的时候，子组件接收的这个数据是不能直接修改的，需要触发父组件的方法来修改这个数据，然后重新传递给子组件。</p>
+<p>props可以改,但是不推荐。如果props传递过来的是一个string修改的会报错,如果是对象的话，修改对象的属性是可以的,但是不推荐这样。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">    a = <span class="number">2</span>;<span class="comment">//修改了a改变了a的内存地址</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>:<span class="string">&#x27;小明&#x27;</span>,<span class="attr">age</span>:<span class="number">12</span>&#125;;</span><br><span class="line">    obj.age = <span class="number">13</span>;<span class="comment">//修改了a但是没有改变obj的内存地址</span></span><br><span class="line"><span class="comment">// 对象修改属性的话vue监测不到,所以在props中传递对象的时候,修改没有报错</span></span><br></pre></td></tr></table></figure></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/blog/2022/02/11/watch和computed的区别/" data-toggle="tooltip" data-placement="top" title="watch和computed的区别">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=vue中props能不能修改&body=Hi,I found this website and thought you might like it https://gitee.com/liumuye666/blog.git/blog/2022/02/24/vue中props能不能修改/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
                 col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
-
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2022">
-          <span class="tag-text">2022</span>
-        </span>
-        <ul>
-          
-          <li>
-            02-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2022/02/24/vue中props能不能修改/" style="color: #0085a1">
-              <span>
-                vue中props能不能修改
-                
-                <!-- -- vue2 -->
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2022/02/11/watch和computed的区别/" style="color: #0085a1">
-              <span>
-                watch和computed的区别
-                
-                <!-- -- vue2 -->
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2022/02/11/vue中一些npm命令/" style="color: #0085a1">
-              <span>
-                vue中一些npm命令
-                
-                <!-- -- vue2 -->
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2022/02/11/vue通过props子向父传值/" style="color: #0085a1">
-              <span>
-                vue通过props子向父传值
-                
-                <!-- -- vue2 -->
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2022/02/11/vue中关闭eslint语法/" style="color: #0085a1">
-              <span>
-                vue中关闭eslint语法
-                
-                <!-- -- vue2 -->
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2022/02/11/plugins(自定义插件)/" style="color: #0085a1">
-              <span>
-                plugins(自定义插件)
-                
-                <!-- -- vue2 -->
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2022/02/11/mixin混入/" style="color: #0085a1">
-              <span>
-                mixin混入
-                
-                <!-- -- vue2 -->
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2022/02/11/vue中一个重要的内置关系/" style="color: #0085a1">
-              <span>
-                vue中一个重要的内置关系
-                
-                <!-- -- vue2 -->
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2022/02/11/vue中组件的data为什么是一个函数/" style="color: #0085a1">
-              <span>
-                vue中组件的data为什么是一个函数
-                
-                <!-- -- vue2 -->
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2022/02/11/vue.js与vue.runtime.xxx.js的区别/" style="color: #0085a1">
-              <span>
-                vue.js与vue.runtime.xxx.js的区别
-                
-                <!-- -- vue2 -->
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2022/01/17/链接/" style="color: #0085a1">
-              <span>
-                链接
-                
-                <!-- -- 链接 -->
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2021">
-          <span class="tag-text">2021</span>
-        </span>
-        <ul>
-          
-          <li>
-            12-21
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/12/21/面试题/" style="color: #0085a1">
-              <span>
-                面试题
-                
-                <!-- -- 面试题 -->
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-21
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/12/21/数组的所有方法/" style="color: #0085a1">
-              <span>
-                数组的所有方法
-                
-                <!-- -- 数组的所有方法 -->
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Visitors -->
-<h5><a href="/blog/">来访者</a></h5>
-
-<div class="widget">
-  <span>
-    浏览 <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 次
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 名访客
-  </span>
-</div>
-
-
-        <hr>
-    
         <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/blog/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/blog/tags/#Vue" title="Vue">Vue</a>
+            
+          </div>
+        </section>
+        
 
-<section>
-  <h5><a href="/blog/tags/">特色标签</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/blog/tags/#Vue" title="Vue" rel="11">Vue</a>
-    
-    
-    
-    <a href="/blog/tags/#Js" title="Js" rel="2">Js</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/blog/about/">关于自己</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/blog/img/avatar/tx.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>爱一个人 攀一座山 追一个梦 不妨大胆一些</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      <!--  -->
-      <li>
-        <a target="_blank" href="https://weibo.com/newlogin?tabtype=weibo&gid=102803&url=https%3A%2F%2Fweibo.com%2F">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      <!--  -->
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/blog/">最新文章</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../../2022/02/24/vue%E4%B8%ADprops%E8%83%BD%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9/">
-      <li>vue中props能不能修改</li>
-    </a>
-    
-    <a href="../../../2022/02/11/watch%E5%92%8Ccomputed%E7%9A%84%E5%8C%BA%E5%88%AB/">
-      <li>watch和computed的区别</li>
-    </a>
-    
-    <a href="../../../2022/02/11/vue.js%E4%B8%8Evue.runtime.xxx.js%E7%9A%84%E5%8C%BA%E5%88%AB/">
-      <li>vue.js与vue.runtime.xxx.js的区别</li>
-    </a>
-    
-    <a href="../../../2022/02/11/vue%E4%B8%AD%E7%BB%84%E4%BB%B6%E7%9A%84data%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/">
-      <li>vue中组件的data为什么是一个函数</li>
-    </a>
-    
-    <a href="../../../2022/02/11/vue%E4%B8%AD%E4%B8%80%E4%B8%AA%E9%87%8D%E8%A6%81%E7%9A%84%E5%86%85%E7%BD%AE%E5%85%B3%E7%B3%BB/">
-      <li>vue中一个重要的内置关系</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
         <!-- Friends Blog -->
-
-<h5><a href="/blog/">链接</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://blog.csdn.net/liumuye88888" target="_blank">CSDN</a></li>
-  
-</ul>
-
-
+        
         <hr>
-    
-        <!-- Archives -->
+        <h5>链接</h5>
+        <ul class="list-inline">
 
-<h5><a href="/blog/archives/">归档</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../02/">February 2022</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/blog/categories/">分类</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/blog/categories/#Vue">
-      <li>Vue</li>
-    </a>
-    
-    <a href="/blog/categories/#Js">
-      <li>Js</li>
-    </a>
-    
-    <a href="/blog/categories/#Vue">
-      <li>Vue</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-</div>
-
-
-    
+          
+          <li>
+            <a href="https://blog.csdn.net/liumuye88888" target="_blank">CSDN</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->

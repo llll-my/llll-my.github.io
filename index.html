@@ -513,6 +513,40 @@ Object.prototype.toString.call()一种最好的基本类型检测方式 Object.p
   <!-- top end -->
   
 
+  <a href="/blog/2022/02/24/vue中props能不能修改/">
+    <h2 class="post-title">
+      vue中props能不能修改
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      vue是单向数据流,单向数据流就是从一个组件单方向将数据流向它的内部组件，也就是父组件的数据流向子组件中,但子组件不能将这个数据修改掉,如果返回到父组件中修改然后重新流向子组件，从而达到更新数据的原理图中可以看到，父组件向子组件传递数据的时候，子组件接收的这个数据是不能直接修改的，需要触发父组件的方法来修改这个数据，然后重新传递给子组件。
+props可以改,但是不推荐。如果props传递过来......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-24
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/blog/2022/02/11/watch和computed的区别/">
     <h2 class="post-title">
       watch和computed的区别
@@ -792,40 +826,6 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/blog/2022/02/11/vue中一些npm命令/">
-    <h2 class="post-title">
-      vue中一些npm命令
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-1.nanoid插件(随机数)12345678910//npm i nanoid安装import &#123;nanoid&#125; from &#x27;nanoid&#x27;export default &#123;  name: &quot;MyHeader&quot;,  data() &#123;    return &#123;      id: nanoid(),//使用......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    发表于
-    2022-02-11
-  </p>
-  <div class="tags">
-    
-    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -874,7 +874,7 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
   <div class="tags">
     
     
-    <a href="/blog/tags/#Vue" title="Vue" rel="10">Vue</a>
+    <a href="/blog/tags/#Vue" title="Vue" rel="11">Vue</a>
     
     
     
@@ -927,6 +927,10 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
 <div class="widget">
   <ul>
     
+    <a href="2022/02/24/vue%E4%B8%ADprops%E8%83%BD%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9/">
+      <li>vue中props能不能修改</li>
+    </a>
+    
     <a href="2022/02/11/watch%E5%92%8Ccomputed%E7%9A%84%E5%8C%BA%E5%88%AB/">
       <li>watch和computed的区别</li>
     </a>
@@ -941,10 +945,6 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
     
     <a href="2022/02/11/vue%E4%B8%AD%E4%B8%80%E4%B8%AA%E9%87%8D%E8%A6%81%E7%9A%84%E5%86%85%E7%BD%AE%E5%85%B3%E7%B3%BB/">
       <li>vue中一个重要的内置关系</li>
-    </a>
-    
-    <a href="2022/02/11/mixin%E6%B7%B7%E5%85%A5/">
-      <li>mixin混入</li>
     </a>
     
   </ul>
@@ -969,7 +969,7 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
 
 <h5><a href="/blog/archives/">归档</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
 </div>
 
 
@@ -1505,20 +1505,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>
