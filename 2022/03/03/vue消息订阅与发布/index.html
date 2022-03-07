@@ -134,10 +134,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://gitee.com/liumuye666/blog.git/blog/2022/02/11/vue通过props子向父传值/">
+  <link rel="canonical" href="https://gitee.com/liumuye666/blog.git/blog/2022/03/03/vue消息订阅与发布/">
   <title>
     
-      vue通过props子向父传值 - 始
+      vue消息订阅与发布 - 始
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -388,11 +388,11 @@
               <a class="tag" href="/blog/tags/#Vue" title="Vue">Vue</a>
               
             </div>
-            <h1>vue通过props子向父传值</h1>
+            <h1>vue消息订阅与发布</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               发表于
-              2022-02-11
+              2022-03-03
             </span>
 
 
@@ -404,7 +404,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              共 <span class="post-count">173</span> 字
+              共 <span class="post-count">370</span> 字
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -466,7 +466,13 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>父组件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=<span class="string">&quot;root&quot;</span>&gt;</span><br><span class="line">    &lt;School :add = <span class="string">&quot;add&quot;</span> /&gt;</span><br><span class="line">    &lt;Student /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"><span class="keyword">import</span> School <span class="keyword">from</span> <span class="string">&quot;./components/School.vue&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> Student <span class="keyword">from</span> <span class="string">&#x27;./components/Student.vue&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&quot;App&quot;</span>,</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      </span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  components:&#123;</span><br><span class="line">    School,</span><br><span class="line">    Student</span><br><span class="line">  &#125;,</span><br><span class="line">  methods:&#123;</span><br><span class="line">   <span class="function"><span class="title">add</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(x)</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><br>子组件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=<span class="string">&quot;root&quot;</span>&gt;</span><br><span class="line">      &lt;button @click=<span class="string">&quot;add(msg)&quot;</span>&gt;点击传递&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&quot;App&quot;</span>,</span><br><span class="line">  props:[<span class="string">&#x27;add&#x27;</span>],</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      msg:<span class="string">&#x27;123&#x27;</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  components:&#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods:&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><br>父组件向子组件传递一个函数,然后子组件通过props接收函数，然后调用向父组件传值</p>
+        <p>一种可以达成任意组件间通信,类似于总线传值</p>
+<h1 id="1-安装pubsub插件"><a href="#1-安装pubsub插件" class="headerlink" title="1.安装pubsub插件"></a>1.安装pubsub插件</h1><p><code>npm i pubsub-js</code></p>
+<h1 id="2-在需要使用pubsub插件的组件中引入"><a href="#2-在需要使用pubsub插件的组件中引入" class="headerlink" title="2.在需要使用pubsub插件的组件中引入"></a>2.在需要使用pubsub插件的组件中引入</h1><p><code>import pubsub from &#39;pubsub-js&#39;</code></p>
+<h1 id="3-进行使用"><a href="#3-进行使用" class="headerlink" title="3.进行使用"></a>3.进行使用</h1><ul>
+<li>传递数据的组件<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;school&quot;</span>&gt;</span><br><span class="line">   &lt;button @click=<span class="string">&quot;dianji()&quot;</span>&gt;点击传递&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> pubsub <span class="keyword">from</span> <span class="string">&#x27;pubsub-js&#x27;</span></span><br><span class="line"><span class="comment">// 引入一个混合</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name:<span class="string">&#x27;Student&#x27;</span>,</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      name:<span class="string">&#x27;小韩&#x27;</span>,</span><br><span class="line">      sex:<span class="string">&#x27;女&#x27;</span>,</span><br><span class="line">      x:<span class="number">12</span>, </span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods:&#123;</span><br><span class="line">    <span class="function"><span class="title">dianji</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">     pubsub.publish(<span class="string">&#x27;hello&#x27;</span>,<span class="number">666</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">  .school&#123;</span><br><span class="line">    background-color: blue;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></li>
+<li>接收数据的组件<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;school&quot;</span>&gt;</span><br><span class="line">   &lt;h2 <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;title font&quot;</span>&gt;学生姓名&#123;&#123;name&#125;&#125;&lt;/h2&gt;</span><br><span class="line">   &lt;h2&gt;学生性别&#123;&#123;sex&#125;&#125;&lt;/h2&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> pubsub <span class="keyword">from</span> <span class="string">&#x27;pubsub-js&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name:<span class="string">&#x27;School&#x27;</span>,</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      name:<span class="string">&#x27;刘刘刘131414&#x27;</span>,</span><br><span class="line">      sex:<span class="string">&#x27;男&#x27;</span>,</span><br><span class="line">      x:<span class="number">12</span> </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 接收的数据第一个参数是传递的事件名，第二个参数才是传递的值</span></span><br><span class="line">  <span class="built_in">this</span>.pubId = pubsub.subscribe(<span class="string">&#x27;hello&#x27;</span>,<span class="function">(<span class="params">msgName,b</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;有人发布了hello消息。&#x27;</span>,msgName,b);</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">beforeDestroy</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">//最后解绑,解绑的是订阅事件的一个id</span></span><br><span class="line">    pubsub.unsubscribe(<span class="built_in">this</span>.pubId)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line"><span class="comment">/* scoped让样式局部生效,防止污染其他组件 */</span></span><br><span class="line">  .school&#123;</span><br><span class="line">    background-color: red;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
 
 
         <hr>
@@ -474,12 +480,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/blog/2022/02/11/vue中关闭eslint语法/" data-toggle="tooltip" data-placement="top" title="vue中关闭eslint语法">&larr; 上一篇</a>
+            <a href="/blog/2022/03/07/vue中一个重要的内置关系/张天禹vue2笔记大全/" data-toggle="tooltip" data-placement="top" title="张天禹vue2笔记大全">&larr; 上一篇</a>
           </li>
           
           
           <li class="next">
-            <a href="/blog/2022/02/11/vue中一些npm命令/" data-toggle="tooltip" data-placement="top" title="vue中一些npm命令">下一篇 &rarr;</a>
+            <a href="/blog/2022/02/24/vue中props能不能修改/" data-toggle="tooltip" data-placement="top" title="vue中props能不能修改">下一篇 &rarr;</a>
           </li>
           
         </ul>
@@ -528,7 +534,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=vue通过props子向父传值&body=Hi,I found this website and thought you might like it https://gitee.com/liumuye666/blog.git/blog/2022/02/11/vue通过props子向父传值/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=vue消息订阅与发布&body=Hi,I found this website and thought you might like it https://gitee.com/liumuye666/blog.git/blog/2022/03/03/vue消息订阅与发布/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -1149,5 +1155,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

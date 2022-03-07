@@ -474,9 +474,13 @@
         <!-- Pager -->
         <ul class="pager">
           
+          <li class="previous">
+            <a href="/blog/2022/03/03/vue消息订阅与发布/" data-toggle="tooltip" data-placement="top" title="vue消息订阅与发布">&larr; 上一篇</a>
+          </li>
+          
           
           <li class="next">
-            <a href="/blog/2022/02/11/watch和computed的区别/" data-toggle="tooltip" data-placement="top" title="watch和computed的区别">下一篇 &rarr;</a>
+            <a href="/blog/2022/02/24/任意组件间通信/" data-toggle="tooltip" data-placement="top" title="任意组件间通信">下一篇 &rarr;</a>
           </li>
           
         </ul>
@@ -1146,5 +1150,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

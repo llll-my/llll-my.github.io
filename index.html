@@ -513,6 +513,84 @@ Object.prototype.toString.call()一种最好的基本类型检测方式 Object.p
   <!-- top end -->
   
 
+  <a href="/blog/2022/03/07/vue中一个重要的内置关系/张天禹vue2笔记大全/">
+    <h2 class="post-title">
+      张天禹vue2笔记大全
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      尚硅谷 张天禹老师vue2笔记脚手架文件结构├── node_modules 
+├── public
+│   ├── favicon.ico: 页签图标
+│   └── index.html: 主页面
+├── src
+│   ├── assets: 存放静态资源
+│   │   └── logo.png
+│   │── component: 存放组件
+│   │   └── HelloWor......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-03-07
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/blog/2022/03/03/vue消息订阅与发布/">
+    <h2 class="post-title">
+      vue消息订阅与发布
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      一种可以达成任意组件间通信,类似于总线传值
+1.安装pubsub插件npm i pubsub-js
+2.在需要使用pubsub插件的组件中引入import pubsub from &#39;pubsub-js&#39;
+3.进行使用
+传递数据的组件1234567891011121314151617181920212223242526272829303132&lt;template&gt;  ......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-03-03
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/blog/2022/02/24/vue中props能不能修改/">
     <h2 class="post-title">
       vue中props能不能修改
@@ -523,6 +601,41 @@ Object.prototype.toString.call()一种最好的基本类型检测方式 Object.p
     <div class="post-content-preview">
       vue是单向数据流,单向数据流就是从一个组件单方向将数据流向它的内部组件，也就是父组件的数据流向子组件中,但子组件不能将这个数据修改掉,如果返回到父组件中修改然后重新流向子组件，从而达到更新数据的原理图中可以看到，父组件向子组件传递数据的时候，子组件接收的这个数据是不能直接修改的，需要触发父组件的方法来修改这个数据，然后重新传递给子组件。
 props可以改,但是不推荐。如果props传递过来......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-24
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/blog/2022/02/24/任意组件间通信/">
+    <h2 class="post-title">
+      任意组件间通信
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      1.全局安装事件总线main.js1234567new Vue(&#123;  render: h =&gt; h(App),  beforeCreate() &#123;    Vue.prototype.$bus = this;//安装全局事件总线,$bus就是当前应用的vm  &#125;&#125;).$mount(&#x27;#app&#x27;)2.使用时间总线
+
+传递的组件12......
     </div>
   </a>
   
@@ -724,108 +837,6 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/blog/2022/02/11/plugins(自定义插件)/">
-    <h2 class="post-title">
-      plugins(自定义插件)
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-
-1.在src&gt;plugins.js(创建js)12345678910111213141516171819202122232425262728293031323334353637export default &#123;  install(Vue) &#123;    Vue.filter(&#x27;mySlice&#x27;, function (value) &#123;   ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    发表于
-    2022-02-11
-  </p>
-  <div class="tags">
-    
-    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/blog/2022/02/11/vue中关闭eslint语法/">
-    <h2 class="post-title">
-      vue中关闭eslint语法
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      在根目录创建vue.config.js123module.exports = &#123;  lintOnSave:false,//关闭语法检查&#125;
-...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    发表于
-    2022-02-11
-  </p>
-  <div class="tags">
-    
-    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/blog/2022/02/11/vue通过props子向父传值/">
-    <h2 class="post-title">
-      vue通过props子向父传值
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      父组件12345678910111213141516171819202122232425&lt;template&gt;  &lt;div id=&quot;root&quot;&gt;    &lt;School :add = &quot;add&quot; /&gt;    &lt;Student /&gt;  &lt;/div&gt;&lt;/template&gt;import Sc......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    发表于
-    2022-02-11
-  </p>
-  <div class="tags">
-    
-    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -874,7 +885,7 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
   <div class="tags">
     
     
-    <a href="/blog/tags/#Vue" title="Vue" rel="11">Vue</a>
+    <a href="/blog/tags/#Vue" title="Vue" rel="14">Vue</a>
     
     
     
@@ -927,24 +938,24 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
 <div class="widget">
   <ul>
     
+    <a href="2022/03/07/vue%E4%B8%AD%E4%B8%80%E4%B8%AA%E9%87%8D%E8%A6%81%E7%9A%84%E5%86%85%E7%BD%AE%E5%85%B3%E7%B3%BB/%E5%BC%A0%E5%A4%A9%E7%A6%B9vue2%E7%AC%94%E8%AE%B0%E5%A4%A7%E5%85%A8/">
+      <li>张天禹vue2笔记大全</li>
+    </a>
+    
+    <a href="2022/03/03/vue%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E4%B8%8E%E5%8F%91%E5%B8%83/">
+      <li>vue消息订阅与发布</li>
+    </a>
+    
     <a href="2022/02/24/vue%E4%B8%ADprops%E8%83%BD%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9/">
       <li>vue中props能不能修改</li>
     </a>
     
+    <a href="2022/02/24/%E4%BB%BB%E6%84%8F%E7%BB%84%E4%BB%B6%E9%97%B4%E9%80%9A%E4%BF%A1/">
+      <li>任意组件间通信</li>
+    </a>
+    
     <a href="2022/02/11/watch%E5%92%8Ccomputed%E7%9A%84%E5%8C%BA%E5%88%AB/">
       <li>watch和computed的区别</li>
-    </a>
-    
-    <a href="2022/02/11/vue.js%E4%B8%8Evue.runtime.xxx.js%E7%9A%84%E5%8C%BA%E5%88%AB/">
-      <li>vue.js与vue.runtime.xxx.js的区别</li>
-    </a>
-    
-    <a href="2022/02/11/vue%E4%B8%AD%E7%BB%84%E4%BB%B6%E7%9A%84data%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/">
-      <li>vue中组件的data为什么是一个函数</li>
-    </a>
-    
-    <a href="2022/02/11/vue%E4%B8%AD%E4%B8%80%E4%B8%AA%E9%87%8D%E8%A6%81%E7%9A%84%E5%86%85%E7%BD%AE%E5%85%B3%E7%B3%BB/">
-      <li>vue中一个重要的内置关系</li>
     </a>
     
   </ul>
@@ -969,7 +980,7 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
 
 <h5><a href="/blog/archives/">归档</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
 </div>
 
 
@@ -1505,5 +1516,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
