@@ -517,6 +517,41 @@ Object.prototype.toString.call()一种最好的基本类型检测方式 Object.p
   <!-- top end -->
   
 
+  <a href="/blog/2022/03/09/keep-alive的作用及用法/">
+    <h2 class="post-title">
+      keep-alive的作用及用法
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      keep-alive 的作用keep-alive是vue的内置组件，当它包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们。keep-alive 是一个抽象组件：它自身不会渲染成一个 DOM 元素，也不会出现在父组件链中。
+在组件切换过程中 把切换出去的组件保留在内存中，防止重复渲染DOM，减少加载时间及性能消耗，提高用户体验性。
+被包含在 keep-alive 中创建的组件，会多出两个......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-03-09
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/blog/2022/03/07/vue2笔记大全/">
     <h2 class="post-title">
       vue2笔记大全
@@ -526,7 +561,10 @@ Object.prototype.toString.call()一种最好的基本类型检测方式 Object.p
     </h3>
     <div class="post-content-preview">
       有道云网址链接：https://note.youdao.com/web/#/file/recent/markdown/645A7C3D45AE4368A91F672C2FC69477/
-...
+关于不同版本的Vue
+vue.js与vue.runtime.xxx.js的区别：
+vue.js是完整版的Vue，包含：核心功能 + 模板解析器。
+vue.runtime.xxx.js是运行版的Vue，只包含：......
     </div>
   </a>
   
@@ -799,41 +837,6 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/blog/2022/02/11/mixin混入/">
-    <h2 class="post-title">
-      mixin混入
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      可以把多个组件都需要使用的东西配置成一个mixin对象
-
-1.第一步在src&gt;mixin.js(创建js)123456789101112131415161718export const mixin = &#123;  methods: &#123;    showName() &#123;      alert(this.name)    &#125;  &#125;,  mounte......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    发表于
-    2022-02-11
-  </p>
-  <div class="tags">
-    
-    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -882,7 +885,7 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
   <div class="tags">
     
     
-    <a href="/blog/tags/#Vue" title="Vue" rel="14">Vue</a>
+    <a href="/blog/tags/#Vue" title="Vue" rel="15">Vue</a>
     
     
     
@@ -943,6 +946,10 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
 <div class="widget">
   <ul>
     
+    <a href="2022/03/09/keep-alive%E7%9A%84%E4%BD%9C%E7%94%A8%E5%8F%8A%E7%94%A8%E6%B3%95/">
+      <li>keep-alive的作用及用法</li>
+    </a>
+    
     <a href="2022/03/07/vue2%E7%AC%94%E8%AE%B0%E5%A4%A7%E5%85%A8/">
       <li>vue2笔记大全</li>
     </a>
@@ -957,10 +964,6 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
     
     <a href="2022/02/24/%E4%BB%BB%E6%84%8F%E7%BB%84%E4%BB%B6%E9%97%B4%E9%80%9A%E4%BF%A1/">
       <li>任意组件间通信</li>
-    </a>
-    
-    <a href="2022/02/11/watch%E5%92%8Ccomputed%E7%9A%84%E5%8C%BA%E5%88%AB/">
-      <li>watch和computed的区别</li>
     </a>
     
   </ul>
@@ -985,7 +988,7 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
 
 <h5><a href="/blog/archives/">归档</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
 </div>
 
 
