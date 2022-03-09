@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://gitee.com/liumuye666/blog.git/2022/03/09/vue3%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2022-03-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gitee.com/liumuye666/blog.git/2022/03/07/vue2%E7%AC%94%E8%AE%B0%E5%A4%A7%E5%85%A8/</loc>
     
     <lastmod>2022-03-06</lastmod>
@@ -199,6 +206,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://gitee.com/liumuye666/blog.git/tags/Vue3/</loc>
+    <lastmod>2022-03-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -231,6 +245,13 @@
   
   <url>
     <loc>https://gitee.com/liumuye666/blog.git/categories/Js/Vue/HTML-CSS/Git/</loc>
+    <lastmod>2022-03-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://gitee.com/liumuye666/blog.git/categories/Vue3/</loc>
     <lastmod>2022-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

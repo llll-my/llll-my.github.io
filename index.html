@@ -552,6 +552,46 @@ Object.prototype.toString.call()一种最好的基本类型检测方式 Object.p
   <!-- top end -->
   
 
+  <a href="/blog/2022/03/09/vue3入门笔记/">
+    <h2 class="post-title">
+      vue3入门笔记
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Vue3快速上手
+1.Vue3简介
+2020年9月18日，Vue.js发布3.0版本，代号：One Piece（海贼王）
+耗时2年多、2600+次提交、30+个RFC、600+次PR、99位贡献者 
+github上的tags地址：https://github.com/vuejs/vue-next/releases/tag/v3.0.0
+
+2.Vue3带来了什么1.性能的提升
+打包大小减少41......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-03-09
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue3" title="Vue3">Vue3</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/blog/2022/03/07/vue2笔记大全/">
     <h2 class="post-title">
       vue2笔记大全
@@ -560,11 +600,14 @@ Object.prototype.toString.call()一种最好的基本类型检测方式 Object.p
       
     </h3>
     <div class="post-content-preview">
-      有道云网址链接：https://note.youdao.com/web/#/file/recent/markdown/645A7C3D45AE4368A91F672C2FC69477/
+      
 关于不同版本的Vue
 vue.js与vue.runtime.xxx.js的区别：
 vue.js是完整版的Vue，包含：核心功能 + 模板解析器。
-vue.runtime.xxx.js是运行版的Vue，只包含：......
+vue.runtime.xxx.js是运行版的Vue，只包含：核心功能；没有模板解析器。
+
+
+因为vue.runtime.xxx.js没有模板解析器，所以不能使用template这个配置项，需要使用render函数接收到的createElemen......
     </div>
   </a>
   
@@ -801,42 +844,6 @@ https://www.cnblogs.com/wangjiachen666/p/9876266.html
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/blog/2022/02/11/vue中一个重要的内置关系/">
-    <h2 class="post-title">
-      vue中一个重要的内置关系
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      一个重要的内置关系：VueComponent.prototype.__proto__==Vue.prototype让组件实例（vc)可以访问到vue原型对象上的属性,方法。
-
-
-Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐式原型对象指向Object的原型对象，而是把它修改，指向了Vue的原型对象。这样就可以让组件实例对象（vc）可以访问到Vue原型对象上的属性，方......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    发表于
-    2022-02-11
-  </p>
-  <div class="tags">
-    
-    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -900,6 +907,10 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
     <a href="/blog/tags/#Git" title="Git" rel="1">Git</a>
     
     
+    
+    <a href="/blog/tags/#Vue3" title="Vue3" rel="1">Vue3</a>
+    
+    
   </div>
 </section>
 
@@ -950,6 +961,10 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
       <li>keep-alive的作用及用法</li>
     </a>
     
+    <a href="2022/03/09/vue3%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
+      <li>vue3入门笔记</li>
+    </a>
+    
     <a href="2022/03/07/vue2%E7%AC%94%E8%AE%B0%E5%A4%A7%E5%85%A8/">
       <li>vue2笔记大全</li>
     </a>
@@ -960,10 +975,6 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
     
     <a href="2022/02/24/vue%E4%B8%ADprops%E8%83%BD%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9/">
       <li>vue中props能不能修改</li>
-    </a>
-    
-    <a href="2022/02/24/%E4%BB%BB%E6%84%8F%E7%BB%84%E4%BB%B6%E9%97%B4%E9%80%9A%E4%BF%A1/">
-      <li>任意组件间通信</li>
     </a>
     
   </ul>
@@ -988,7 +999,7 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
 
 <h5><a href="/blog/archives/">归档</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li></ul>
 </div>
 
 
@@ -1018,6 +1029,10 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
     
     <a href="/blog/categories/#Git">
       <li>Git</li>
+    </a>
+    
+    <a href="/blog/categories/#Vue3">
+      <li>Vue3</li>
     </a>
     
   </ul>
