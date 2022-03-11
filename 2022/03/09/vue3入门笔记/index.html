@@ -461,6 +461,7 @@
 		<!-- Modify by Yu-Hsuan Yen -->
 <!-- Post Content -->
 <article>
+
   <div class="container">
     <div class="row">
       <!-- Post Container -->
@@ -602,14 +603,14 @@
 </li>
 <li><p>Reflect：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect</a></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Proxy</span>(data, &#123;</span><br><span class="line">	<span class="comment">// 拦截读取属性值</span></span><br><span class="line">    get (target, prop) &#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="built_in">Reflect</span>.get(target, prop)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 拦截设置属性值或添加新属性</span></span><br><span class="line">    set (target, prop, value) &#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="built_in">Reflect</span>.set(target, prop, value)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 拦截删除属性</span></span><br><span class="line">    deleteProperty (target, prop) &#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="built_in">Reflect</span>.deleteProperty(target, prop)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">proxy.name = <span class="string">&#x27;tom&#x27;</span>   </span><br></pre></td></tr></table></figure>
-</li>
+<p><code>Object.defineProperty有错误直接报错,不往下面走了！！！</code><br><code>Reflect.defineProperty有错误不直接返回,返回布尔值，依然会直接走下去！！！</code></p>
+<h2 id="5-reactive对比ref"><a href="#5-reactive对比ref" class="headerlink" title="5.reactive对比ref"></a>5.reactive对比ref</h2></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-<h2 id="5-reactive对比ref"><a href="#5-reactive对比ref" class="headerlink" title="5.reactive对比ref"></a>5.reactive对比ref</h2><ul>
-<li>从定义数据角度对比：<ul>
+<li><p>从定义数据角度对比：</p>
+<ul>
 <li>ref用来定义：<strong style="color:#DD5145">基本类型数据</strong>。</li>
 <li>reactive用来定义：<strong style="color:#DD5145">对象（或数组）类型数据</strong>。</li>
 <li>备注：ref也可以用来定义<strong style="color:#DD5145">对象（或数组）类型数据</strong>, 它内部会自动通过<code>reactive</code>转为<strong style="color:#DD5145">代理对象</strong>。</li>
