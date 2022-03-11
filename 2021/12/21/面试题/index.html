@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              共 <span class="post-count">11.8k</span> 字
+              共 <span class="post-count">11.9k</span> 字
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -569,7 +569,10 @@ hasOwnProperty() 方法详解  <a target="_blank" rel="noopener" href="https://b
 </blockquote>
 <h2 id="如何实现异步编程"><a href="#如何实现异步编程" class="headerlink" title="如何实现异步编程"></a>如何实现异步编程</h2><p>回调函数</p>
 <h2 id="什么是generator"><a href="#什么是generator" class="headerlink" title="什么是generator"></a>什么是generator</h2><blockquote>
-<p>generators 是可以控制 iterator（迭代器）的函数。并在任何时候都可以暂停和恢复。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">generatorForLoop</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; num; i += <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">yield</span> <span class="built_in">console</span>.log(i);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> genForLoop = generatorForLoop(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">genForLoop.next(); <span class="comment">// 首先 console.log —— 0</span></span><br><span class="line">genForLoop.next(); <span class="comment">// 1</span></span><br><span class="line">genForLoop.next(); <span class="comment">// 2</span></span><br><span class="line">genForLoop.next(); <span class="comment">// 3</span></span><br><span class="line">genForLoop.next(); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure><br>帮助理解 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/45599048">https://zhuanlan.zhihu.com/p/45599048</a></p>
+<p>generators 是可以控制 iterator（迭代器）的函数。并在任何时候都可以暂停和恢复。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">generatorForLoop</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; num; i += <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">yield</span> <span class="built_in">console</span>.log(i);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> genForLoop = generatorForLoop(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">genForLoop.next(); <span class="comment">// 首先 console.log —— 0</span></span><br><span class="line">genForLoop.next(); <span class="comment">// 1</span></span><br><span class="line">genForLoop.next(); <span class="comment">// 2</span></span><br><span class="line">genForLoop.next(); <span class="comment">// 3</span></span><br><span class="line">genForLoop.next(); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+<p>帮助理解 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/45599048">https://zhuanlan.zhihu.com/p/45599048</a></p>
 <h2 id="Generator是怎么样使用的以及各个阶段的变化如何？🌟🌟🌟"><a href="#Generator是怎么样使用的以及各个阶段的变化如何？🌟🌟🌟" class="headerlink" title="Generator是怎么样使用的以及各个阶段的变化如何？🌟🌟🌟"></a>Generator是怎么样使用的以及各个阶段的变化如何？🌟🌟🌟</h2><ul>
 <li>首先生成器是一个函数，用来返回迭代器</li>
 <li>调用生成器后不会立即执行，而是通过返回的迭代器来控制这个生成器一步一步执行的</li>
@@ -579,16 +582,16 @@ hasOwnProperty() 方法详解  <a target="_blank" rel="noopener" href="https://b
 <li>这时候生成器处于一个非阻塞的挂起状态</li>
 <li>调用迭代器的next方法的时候，生成器又从挂起状态变成执行状态，继续上一次执行位置开始执行</li>
 <li>直到遇到下一次yield依次循环</li>
-<li>直到代码没有yield了，就会返回一个done为true，value为undefined的对象<h2 id="说说-Promise-的原理？你是如何理解-Promise-的？🌟🌟🌟🌟🌟"><a href="#说说-Promise-的原理？你是如何理解-Promise-的？🌟🌟🌟🌟🌟" class="headerlink" title="说说 Promise 的原理？你是如何理解 Promise 的？🌟🌟🌟🌟🌟"></a>说说 Promise 的原理？你是如何理解 Promise 的？🌟🌟🌟🌟🌟</h2><pre><code class="lang-实现原理```">说到底，Promise 也还是使用回调函数，只不过是把回调封装在了内部，使用上一直通过 then 方法的链式调用，使得多层的回调嵌套看起来变成了同一层的，书写上以及理解上会更直观和简洁一些。
+<li><p>直到代码没有yield了，就会返回一个done为true，value为undefined的对象</p>
+<h2 id="说说-Promise-的原理？你是如何理解-Promise-的？🌟🌟🌟🌟🌟"><a href="#说说-Promise-的原理？你是如何理解-Promise-的？🌟🌟🌟🌟🌟" class="headerlink" title="说说 Promise 的原理？你是如何理解 Promise 的？🌟🌟🌟🌟🌟"></a>说说 Promise 的原理？你是如何理解 Promise 的？🌟🌟🌟🌟🌟</h2><pre><code class="lang-实现原理```">&gt;说到底，Promise 也还是使用回调函数，只不过是把回调封装在了内部，使用上一直通过 then 方法的链式调用，使得多层的回调嵌套看起来变成了同一层的，书写上以及理解上会更直观和简洁一些。
 帮助理解 https://blog.csdn.net/qq_37860963/article/details/81539118
 ## 宏任务和微任务有哪些🌟🌟🌟🌟🌟
 ```宏任务:
 </code></pre>
-script,setTimeOut,setInterval,setImmediate<br><code>微任务:</code><br>Promise.then,process.nextTick,Object.observe,MutationObserve</li>
-</ul>
-</blockquote>
-<ul>
-<li>Promise是同步任务<h2 id="宏任务和微任务是怎么执行的🌟🌟🌟🌟🌟"><a href="#宏任务和微任务是怎么执行的🌟🌟🌟🌟🌟" class="headerlink" title="宏任务和微任务是怎么执行的🌟🌟🌟🌟🌟"></a>宏任务和微任务是怎么执行的🌟🌟🌟🌟🌟</h2></li>
+<p>script,setTimeOut,setInterval,setImmediate<br><code>微任务:</code><br>Promise.then,process.nextTick,Object.observe,MutationObserve</p>
+</li>
+<li><p>Promise是同步任务</p>
+<h2 id="宏任务和微任务是怎么执行的🌟🌟🌟🌟🌟"><a href="#宏任务和微任务是怎么执行的🌟🌟🌟🌟🌟" class="headerlink" title="宏任务和微任务是怎么执行的🌟🌟🌟🌟🌟"></a>宏任务和微任务是怎么执行的🌟🌟🌟🌟🌟</h2></li>
 <li>执行宏任务中的script</li>
 <li>进行script后，所有的同步任务主线程执行</li>
 <li>所有的宏任务放入宏任务执行队列</li>
@@ -626,7 +629,7 @@ script,setTimeOut,setInterval,setImmediate<br><code>微任务:</code><br>Promise
 <li>Proxy对象，里面传两个对象，第一个对象是目标对象target，第二个对象是专门放get和set的handler对象。Proxy和上面两个的区别在于Proxy专门对对象的属性进行get和set<br><code>代理的实际应用有:</code></li>
 <li>Vue的双向绑定vue2用的是Object.definProperty,vue3用的是proxy</li>
 <li>校验值</li>
-<li>计算属性值(get的时候加以修饰)<h2 id="为什么要使用模块化🌟🌟🌟"><a href="#为什么要使用模块化🌟🌟🌟" class="headerlink" title="为什么要使用模块化🌟🌟🌟"></a>为什么要使用模块化🌟🌟🌟</h2></li>
+<li>计算属性值(get的时候加以修饰)<br>Object.definProperty 帮助理解<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46726346/article/details/115913752">https://blog.csdn.net/weixin_46726346/article/details/115913752</a><h2 id="为什么要使用模块化🌟🌟🌟"><a href="#为什么要使用模块化🌟🌟🌟" class="headerlink" title="为什么要使用模块化🌟🌟🌟"></a>为什么要使用模块化🌟🌟🌟</h2></li>
 <li>防止命名冲突</li>
 <li>更好分离按需加载</li>
 <li>更好的复用性</li>
@@ -783,6 +786,10 @@ vuex也可以传值<h2 id="Vue-router有哪几种钩子函数"><a href="#Vue-rou
             <a href="/blog/2021/12/21/数组的所有方法/" data-toggle="tooltip" data-placement="top" title="数组的所有方法">&larr; 上一篇</a>
           </li>
           
+          
+          <li class="next">
+            <a href="/blog/2021/01/17/主题优化/" data-toggle="tooltip" data-placement="top" title="主题优化">下一篇 &rarr;</a>
+          </li>
           
         </ul>
 

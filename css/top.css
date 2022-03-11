@@ -151,3 +151,17 @@
 .icon-hot:before {
   content: "\e837";
 }
+body {
+  cursor: url(https://s2.loli.net/2022/03/11/IhLVXvdEznp8mTr.png), auto;
+}
+
+.hide-block>.hide-button.open,
+.hide-inline>.hide-button.open {
+  display: block
+}
+
+a,
+button,
+img {
+  cursor: url(https://s2.loli.net/2022/03/11/kmA1JaVnxrB86PS.png), auto
+}

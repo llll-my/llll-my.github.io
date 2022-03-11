@@ -404,7 +404,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              共 <span class="post-count">5.7k</span> 字
+              共 <span class="post-count">5.9k</span> 字
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -914,6 +914,7 @@
 </ol>
 </li>
 </ol>
+<p><code>node.js部署的话需要下载connect-history 解决路由history模式刷新404问题</code><br><code>路由history模式刷新页面会进行http请求,hash模式#后面的不会进行http请求</code><br><!-- nodejs简单部署代码 --><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> history = <span class="built_in">require</span>(<span class="string">&#x27;connect-history-api-fallback&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line">app.use(history())<span class="comment">//在静态资源之前</span></span><br><span class="line">app.use(express.static(__dirname+<span class="string">&#x27;/static&#x27;</span>)) <span class="comment">//在文件夹根目录创建static的文件夹</span></span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/person&#x27;</span>,<span class="function">(<span class="params">req,res</span>) =&gt;</span> &#123;</span><br><span class="line">  res.send(&#123;</span><br><span class="line">    name:<span class="string">&#x27;liu&#x27;</span>,</span><br><span class="line">    age:<span class="number">23</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// connect-history 解决路由history模式刷新404问题</span></span><br><span class="line"><span class="comment">// 路由history模式刷新页面会进行http请求,hash模式#后面的不会进行http请求</span></span><br><span class="line">app.listen(<span class="number">5005</span>,<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span>(!err) <span class="built_in">console</span>.log(<span class="string">&#x27;服务器启动成功啦！&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
 
 
         <hr>
