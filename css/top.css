@@ -152,7 +152,7 @@
   content: "\e837";
 }
 body {
-  cursor: url(https://s2.loli.net/2022/03/11/IhLVXvdEznp8mTr.png), auto;
+  cursor: url(./images/1-1.png), auto;
 }
 
 .hide-block>.hide-button.open,
@@ -163,5 +163,5 @@ body {
 a,
 button,
 img {
-  cursor: url(https://s2.loli.net/2022/03/11/kmA1JaVnxrB86PS.png), auto
+  cursor: url(./images/1-2.png), auto
 }
