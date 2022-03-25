@@ -470,6 +470,80 @@
   <!-- top end -->
   
 
+  <a href="/blog/2022/02/11/vue.js与vue.runtime.xxx.js的区别/">
+    <h2 class="post-title">
+      vue.js与vue.runtime.xxx.js的区别
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      vue.js是完整版的vue，包含：核心功能+模版解析器
+vue.runtime.xxx.js是运行版的vue只包含：核心功能，没有模版解析器
+vue.runtime.xxx.js体积更小！
+因为vue.runtime.xxx.js没有模版解析器,所以不能使用template配置项,需要使用render函数接收到的createElement函数去指定具体内容
+12345678910// 创建......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-11
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/blog/2022/02/11/vue中组件的data为什么是一个函数/">
+    <h2 class="post-title">
+      vue中组件的data为什么是一个函数
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      组件是可复用的,一个组件被创建好之后,就可能被用在多个地方,组件不管复用多少次,组件中的data数据都应该是相互隔离的,互不影响，基于这一理念，组件每复用一次，data就复制一份,之后，当某一处复用的地方组件内data数据改变时，其他复用地方的组件data数据不受影响.
+
+https://www.cnblogs.com/wangjiachen666/p/9876266.html
+
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-11
+  </p>
+  <div class="tags">
+    
+    <a href="/blog/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/blog/2022/02/11/vue中一个重要的内置关系/">
     <h2 class="post-title">
       vue中一个重要的内置关系
@@ -744,40 +818,6 @@ ht......
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/blog/2021/01/17/主题优化/">
-    <h2 class="post-title">
-      主题优化
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      鼠标样式
-图片大小 32*32 否则无法显示
-themes&gt;livemylive&gt;source&gt;css&gt;top.css
-1234567891011121314body &#123;  cursor: url(https://cdn.jsdelivr.net/gh/tzy13755126023/BLOG_SOURCE/theme_f/curcor1.png), auto......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    发表于
-    2021-01-17
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -786,6 +826,10 @@ themes&gt;livemylive&gt;source&gt;css&gt;top.css
       <a href="/blog/">&larr; 上一页</a>
     </li>
     
+    
+    <li class="next">
+      <a href="/blog/archives/3/">下一页 &rarr;</a>
+    </li>
     
   </ul>
 
@@ -845,6 +889,10 @@ themes&gt;livemylive&gt;source&gt;css&gt;top.css
     <a href="/blog/tags/#Vue3" title="Vue3" rel="1">Vue3</a>
     
     
+    
+    <a href="/blog/tags/#Ts" title="Ts" rel="2">Ts</a>
+    
+    
   </div>
 </section>
 
@@ -891,6 +939,14 @@ themes&gt;livemylive&gt;source&gt;css&gt;top.css
 <div class="widget">
   <ul>
     
+    <a href="../../2022/03/20/ts%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
+      <li>ts入门笔记</li>
+    </a>
+    
+    <a href="../../2022/03/20/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+      <li>面向对象</li>
+    </a>
+    
     <a href="../../2022/03/09/keep-alive%E7%9A%84%E4%BD%9C%E7%94%A8%E5%8F%8A%E7%94%A8%E6%B3%95/">
       <li>keep-alive的作用及用法</li>
     </a>
@@ -901,14 +957,6 @@ themes&gt;livemylive&gt;source&gt;css&gt;top.css
     
     <a href="../../2022/03/07/vue2%E7%AC%94%E8%AE%B0%E5%A4%A7%E5%85%A8/">
       <li>vue2笔记大全</li>
-    </a>
-    
-    <a href="../../2022/03/03/vue%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E4%B8%8E%E5%8F%91%E5%B8%83/">
-      <li>vue消息订阅与发布</li>
-    </a>
-    
-    <a href="../../2022/02/24/vue%E4%B8%ADprops%E8%83%BD%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9/">
-      <li>vue中props能不能修改</li>
     </a>
     
   </ul>
@@ -933,7 +981,7 @@ themes&gt;livemylive&gt;source&gt;css&gt;top.css
 
 <h5><a href="/blog/archives/">归档</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -967,6 +1015,10 @@ themes&gt;livemylive&gt;source&gt;css&gt;top.css
     
     <a href="/blog/categories/#Vue3">
       <li>Vue3</li>
+    </a>
+    
+    <a href="/blog/categories/#Ts">
+      <li>Ts</li>
     </a>
     
   </ul>
