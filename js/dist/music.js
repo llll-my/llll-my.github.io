@@ -4,16 +4,16 @@ const ap = new APlayer({
   autoplay: false,
   audio: [
     {
-      name: "你一定要幸福",
-      artist: '简弘亦',
-      url: 'http://www.ytmp3.cn/down/51689.mp3',
-      cover: 'http://img.ytmp3.cn/image/52.jpg',
+      name: "光辉岁月",
+      artist: 'Beyond',
+      url: 'http://music.163.com/song/media/outer/url?id=1855073420.mp3',
+      cover: 'http://p1.music.126.net/r9MeMC_AQBUvOxjDhzFJVA==/109951166107927511.jpg?param=130y130',
     },
     {
-      name: '一百万个可能(Live)',
-      artist: '摩登兄弟',
-      url: 'http://www.ytmp3.cn/down/52772.mp3',
-      cover: 'http://img.ytmp3.cn/image/53.jpg',
+      name: '断线',
+      artist: 'Shang/lil sophy',
+      url: 'http://music.163.com/song/media/outer/url?id=496370620.mp3',
+      cover: 'http://p1.music.126.net/W-4b64hCb_s8OAGROQXgig==/109951162995598984.jpg?param=130y130',
     },
     {
       name: 'The Rose',
