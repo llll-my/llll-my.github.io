@@ -788,8 +788,57 @@
   <a title="返回顶部"><img src="/img/imgs/mvvm.png"/></a>
   </div> -->
 <script src="/blog/js/totop.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 
+  <!-- 音频播放 -->
+  <link rel="stylesheet" href="/blog/js/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/blog/js/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/blog/js/dist/music.js"></script>
 <script>
+//   $(document).pjax('a[target!="_blank"]', 'header', {
+//     fragment: "header",
+//     timeout: 5000
+// });
+// (function($){
+//     var MyApp = {
+//         initPjax: function(){
+//             var self = this;
+//             // 初始化
+//             $(document).pjax('a[target!="_blank"]', 'header', {
+//             	fragment: "header",
+//             	timeout: 5000
+//             });
+//             // pjax请求开始
+//             $(document).on('pjax:start', function () {
+
+//             });
+//             // PJAX 渲染结束时
+//             $(document).on('pjax:end', function() {
+//                 self.siteBootUp();
+//                 //在「局部刷新」时才会运行
+//                 console.log("局部执行");
+//             });
+//             self.siteBootUp();
+//         },
+//         /*
+//         * Things to be execute when normal page load
+//         * and pjax page load.
+//         */
+//         siteBootUp: function(){
+//             //「局部刷新」和「页面刷新」都需要运行的代码
+//             console.log("全局执行");
+//         }
+//     };
+//     window.MyApp = MyApp;
+// })(jQuery);
+
+// //「页面刷新」事件触发运行
+// $(document).ready(function() {
+//     MyApp.initPjax();
+// });
+
   // async load function
   function async (u, c) {
     var d = document,
@@ -1169,4 +1218,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script src="/blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/blog/live2dw/assets/izumi.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+	
 </html>
