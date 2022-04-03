@@ -350,19 +350,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/tihuan/鲨鱼.jpeg');
-      --intro-header-background-image-url-post: url('img/header_img/tihuan.png');
-      --intro-header-background-image-url-page: url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-post: url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-page: url('//img/header_img/tihuan.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/tihuan/鲨鱼.jpeg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/tihuan.png');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/tihuan.png');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('img/header_img/tihuan.png'); */
+        /* background-image: url('/img/header_img/tihuan.png'); */
       
     }
 
@@ -406,7 +406,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              共 <span class="post-count">75</span> 字
+              共 <span class="post-count">76</span> 字
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -470,12 +470,16 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <ul>
-<li>1.nanoid插件(随机数)<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//npm i nanoid安装</span></span><br><span class="line"><span class="keyword">import</span> &#123;nanoid&#125; <span class="keyword">from</span> <span class="string">&#x27;nanoid&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&quot;MyHeader&quot;</span>,</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      id: nanoid(),<span class="comment">//使用可以传参数,参数为随机id的长度</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>2.查看webpack的所有版本<blockquote>
-<p>npm view webpack versions<br>npm view less-loader versions查看less所有版本</p>
-</blockquote>
-</li>
+<li>1.nanoid插件(随机数)</li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//npm i nanoid安装</span></span><br><span class="line"><span class="keyword">import</span> &#123;nanoid&#125; <span class="keyword">from</span> <span class="string">&#x27;nanoid&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&quot;MyHeader&quot;</span>,</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      id: nanoid(),<span class="comment">//使用可以传参数,参数为随机id的长度</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>2.查看webpack的所有版本</li>
+</ul>
+<blockquote>
+<p>npm view webpack versions<br>
+npm view less-loader versions查看less所有版本</p>
+</blockquote>
 
 
         <hr>
@@ -741,7 +745,7 @@
   <!-- Custom Theme JavaScript -->
   <script type="text/javascript" src="/js/hux-blog.min.js"></script>
   <!-- catalog -->
-  <script async="true" type="text/javascript" src="/blog/js/catalog.js"></script>
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
   <!-- totop(rocket) -->
   <script async="true" type="text/javascript" src="/js/totop.js"></script>
 
@@ -821,7 +825,7 @@
 </script>
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
-https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+https://github.com/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->

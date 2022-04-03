@@ -350,19 +350,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/tihuan/鲨鱼.jpeg');
-      --intro-header-background-image-url-post: url('img/header_img/tihuan.png');
-      --intro-header-background-image-url-page: url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-post: url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-page: url('//img/header_img/tihuan.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/tihuan/鲨鱼.jpeg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/tihuan.png');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/tihuan.png');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('img/header_img/tihuan.png'); */
+        /* background-image: url('/img/header_img/tihuan.png'); */
       
     }
 
@@ -469,7 +469,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>一个重要的内置关系：<code>VueComponent.prototype.__proto__==Vue.prototype</code><br>让组件实例（vc)可以访问到vue原型对象上的属性,方法。</p>
+        <p>一个重要的内置关系：<code>VueComponent.prototype.__proto__==Vue.prototype</code><br>
+让组件实例（vc)可以访问到vue原型对象上的属性,方法。</p>
 <p><img src="https://s2.loli.net/2022/02/22/SOoP6wIx8aN427i.png" alt="vue"></p>
 <blockquote>
 <p>Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐式原型对象指向Object的原型对象，而是把它修改，指向了Vue的原型对象。这样就可以让组件实例对象（vc）可以访问到Vue原型对象上的属性，方法。</p>
@@ -739,7 +740,7 @@
   <!-- Custom Theme JavaScript -->
   <script type="text/javascript" src="/js/hux-blog.min.js"></script>
   <!-- catalog -->
-  <script async="true" type="text/javascript" src="/blog/js/catalog.js"></script>
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
   <!-- totop(rocket) -->
   <script async="true" type="text/javascript" src="/js/totop.js"></script>
 
@@ -819,7 +820,7 @@
 </script>
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
-https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+https://github.com/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->

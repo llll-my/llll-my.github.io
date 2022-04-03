@@ -350,19 +350,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/tihuan/鲨鱼.jpeg');
-      --intro-header-background-image-url-post: url('img/header_img/tihuan.png');
-      --intro-header-background-image-url-page: url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-post: url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-page: url('//img/header_img/tihuan.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/tihuan/鲨鱼.jpeg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/tihuan.png');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tihuan.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/tihuan.png');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('img/header_img/tihuan.png'); */
+        /* background-image: url('/img/header_img/tihuan.png'); */
       
     }
 
@@ -406,7 +406,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              共 <span class="post-count">179</span> 字
+              共 <span class="post-count">181</span> 字
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -471,11 +471,17 @@
 
         <p>可以把多个组件都需要使用的东西配置成一个mixin对象</p>
 <ul>
-<li>1.第一步在src&gt;mixin.js(创建js)<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> mixin = &#123;</span><br><span class="line">  methods: &#123;</span><br><span class="line">    <span class="function"><span class="title">showName</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      alert(<span class="built_in">this</span>.name)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;你好呀&#x27;</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> mixin2 = &#123;</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      x: <span class="number">100</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>2.在组件中引入mixin<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;mixin,mixin2&#125; <span class="keyword">from</span> <span class="string">&#x27;../mixin.js&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name:<span class="string">&#x27;School&#x27;</span>,</span><br><span class="line">  <span class="comment">//data中的数据如果组件有就用组件的</span></span><br><span class="line">  <span class="comment">// 生命周期都会执行</span></span><br><span class="line">  <span class="comment">// 可以把多个组件需要的配置成一个mixin对象</span></span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      name:<span class="string">&#x27;刘刘刘&#x27;</span>,</span><br><span class="line">      sex:<span class="string">&#x27;男&#x27;</span>,</span><br><span class="line">      x:<span class="number">12</span> </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mixins:[mixin,mixin2],</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>3.全局mixin引入在main.js里<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;mixin2&#125; <span class="keyword">from</span> <span class="string">&#x27;./mixin.js&#x27;</span></span><br><span class="line">Vue.use(mixin2)</span><br></pre></td></tr></table></figure>
-</li>
+<li>1.第一步在src&gt;mixin.js(创建js)</li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> mixin = &#123;</span><br><span class="line">  methods: &#123;</span><br><span class="line">    <span class="function"><span class="title">showName</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      alert(<span class="built_in">this</span>.name)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;你好呀&#x27;</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> mixin2 = &#123;</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      x: <span class="number">100</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>2.在组件中引入mixin</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;mixin,mixin2&#125; <span class="keyword">from</span> <span class="string">&#x27;../mixin.js&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name:<span class="string">&#x27;School&#x27;</span>,</span><br><span class="line">  <span class="comment">//data中的数据如果组件有就用组件的</span></span><br><span class="line">  <span class="comment">// 生命周期都会执行</span></span><br><span class="line">  <span class="comment">// 可以把多个组件需要的配置成一个mixin对象</span></span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      name:<span class="string">&#x27;刘刘刘&#x27;</span>,</span><br><span class="line">      sex:<span class="string">&#x27;男&#x27;</span>,</span><br><span class="line">      x:<span class="number">12</span> </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mixins:[mixin,mixin2],</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>3.全局mixin引入在main.js里</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;mixin2&#125; <span class="keyword">from</span> <span class="string">&#x27;./mixin.js&#x27;</span></span><br><span class="line">Vue.use(mixin2)</span><br></pre></td></tr></table></figure>
 
 
         <hr>
@@ -741,7 +747,7 @@
   <!-- Custom Theme JavaScript -->
   <script type="text/javascript" src="/js/hux-blog.min.js"></script>
   <!-- catalog -->
-  <script async="true" type="text/javascript" src="/blog/js/catalog.js"></script>
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
   <!-- totop(rocket) -->
   <script async="true" type="text/javascript" src="/js/totop.js"></script>
 
@@ -821,7 +827,7 @@
 </script>
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
-https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+https://github.com/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->

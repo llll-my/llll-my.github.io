@@ -480,7 +480,11 @@
       
     </h3>
     <div class="post-content-preview">
-      vue.js是完整版的vue，包含：核心功能+模版解析器vue.runtime.xxx.js是运行版的vue只包含：核心功能，没有模版解析器vue.runtime.xxx.js体积更小！因为vue.runtime.xxx.js没有模版解析器,所以不能使用template配置项,需要使用render函数接收到的createElement函数去指定具体内容12345678910// 创建Vue实......
+      vue.js是完整版的vue，包含：核心功能+模版解析器
+vue.runtime.xxx.js是运行版的vue只包含：核心功能，没有模版解析器
+vue.runtime.xxx.js体积更小！
+因为vue.runtime.xxx.js没有模版解析器,所以不能使用template配置项,需要使用render函数接收到的createElement函数去指定具体内容
+12345678910// 创建......
     </div>
   </a>
   
@@ -550,10 +554,11 @@ https://www.cnblogs.com/wangjiachen666/p/9876266.html
       
     </h3>
     <div class="post-content-preview">
-      一个重要的内置关系：VueComponent.prototype.__proto__==Vue.prototype让组件实例（vc)可以访问到vue原型对象上的属性,方法。
+      一个重要的内置关系：VueComponent.prototype.__proto__==Vue.prototype
+让组件实例（vc)可以访问到vue原型对象上的属性,方法。
 
 
-Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐式原型对象指向Object的原型对象，而是把它修改，指向了Vue的原型对象。这样就可以让组件实例对象（vc）可以访问到Vue原型对象上的属性，方......
+Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐式原型对象指向Object的原型对象，而是把它修改，指向了Vue的原型对象。这样就可以让组件实例对象（vc）可以访问到Vue原型对象上的属性，......
     </div>
   </a>
   
@@ -588,7 +593,9 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
     <div class="post-content-preview">
       可以把多个组件都需要使用的东西配置成一个mixin对象
 
-1.第一步在src&gt;mixin.js(创建js)123456789101112131415161718export const mixin = &#123;  methods: &#123;    showName() &#123;      alert(this.name)    &#125;  &#125;,  mounte......
+1.第一步在src&gt;mixin.js(创建js)
+
+123456789101112131415161718export const mixin = &#123;  methods: &#123;    showName() &#123;      alert(this.name)    &#125;  &#125;,  moun......
     </div>
   </a>
   
@@ -623,7 +630,9 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
     <div class="post-content-preview">
       
 
-1.在src&gt;plugins.js(创建js)12345678910111213141516171819202122232425262728293031323334353637export default &#123;  install(Vue) &#123;    Vue.filter(&#x27;mySlice&#x27;, function (value) &#123;   ......
+1.在src&gt;plugins.js(创建js)
+
+12345678910111213141516171819202122232425262728293031323334353637export default &#123;  install(Vue) &#123;    Vue.filter(&#x27;mySlice&#x27;, function (value) &#123; ......
     </div>
   </a>
   
@@ -656,7 +665,8 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
       
     </h3>
     <div class="post-content-preview">
-      在根目录创建vue.config.js123module.exports = &#123;  lintOnSave:false,//关闭语法检查&#125;
+      在根目录创建vue.config.js
+123module.exports = &#123;  lintOnSave:false,//关闭语法检查&#125;
 ...
     </div>
   </a>
@@ -691,7 +701,9 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
     </h3>
     <div class="post-content-preview">
       
-1.nanoid插件(随机数)12345678910//npm i nanoid安装import &#123;nanoid&#125; from &#x27;nanoid&#x27;export default &#123;  name: &quot;MyHeader&quot;,  data() &#123;    return &#123;      id: nanoid(),//使用......
+1.nanoid插件(随机数)
+
+12345678910//npm i nanoid安装import &#123;nanoid&#125; from &#x27;nanoid&#x27;export default &#123;  name: &quot;MyHeader&quot;,  data() &#123;    return &#123;      id: nanoid(),//......
     </div>
   </a>
   
@@ -724,7 +736,9 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
       
     </h3>
     <div class="post-content-preview">
-      第一种:父组件给子组件传递函数类型的props实现父组件12345678910111213141516171819202122232425&lt;template&gt;  &lt;div id=&quot;root&quot;&gt;    &lt;School :add = &quot;add&quot; /&gt;    &lt;Student /&gt;  &lt;/div&gt;&......
+      第一种:父组件给子组件传递函数类型的props实现
+父组件
+12345678910111213141516171819202122232425&lt;template&gt;  &lt;div id=&quot;root&quot;&gt;    &lt;School :add = &quot;add&quot; /&gt;    &lt;Student /&gt;  &lt;/div&gt......
     </div>
   </a>
   
@@ -1114,7 +1128,7 @@ ht......
   <!-- Custom Theme JavaScript -->
   <script type="text/javascript" src="/js/hux-blog.min.js"></script>
   <!-- catalog -->
-  <script async="true" type="text/javascript" src="/blog/js/catalog.js"></script>
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
   <!-- totop(rocket) -->
   <script async="true" type="text/javascript" src="/js/totop.js"></script>
 
@@ -1194,7 +1208,7 @@ ht......
 </script>
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
-https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+https://github.com/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->

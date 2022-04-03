@@ -485,12 +485,13 @@
     </h3>
     <div class="post-content-preview">
       
-
 判断数据类型的方法🌟🌟🌟🌟🌟
+
 typeof(缺点typeof ull的值为Object,无法分辨是null还是Object)
 instanceof(只能判断对象是否存在于目标对象的原型链上)
 constructor
-Object.prototype.toString.call()一种最好的基本类型检测方式 Object.prototype.toString.call() ;它可......
+Object.prototype.toString.call()
+一种最好的基本类型检测方式 Object.prototype.toString.call() ;它......
     </div>
   </a>
   
@@ -529,12 +530,14 @@ Object.prototype.toString.call()一种最好的基本类型检测方式 Object.p
       
     </h3>
     <div class="post-content-preview">
-      第一章 快速入门0、TypeScript简介
+      第一章 快速入门
+0、TypeScript简介
+
 TypeScript是JavaScript的超集。
 它对JS进行了扩展，向JS中引入了类型的概念，并添加了许多新的特性。
 TS代码需要通过编译器编译为JS，然后再交由JS解析器执行。
 TS完全兼容JS，换言之，任何的JS代码都可以直接当成JS使用。
-相较于JS而言，TS拥有了静态类型，更加严格的语法，更强大的功能；TS可以在代码执行前就完成代码的......
+相较于JS而言，TS拥有了静态类型，更加严格的语法，更强大的功能；TS可以在代码执行前就完成代......
     </div>
   </a>
   
@@ -569,13 +572,14 @@ TS完全兼容JS，换言之，任何的JS代码都可以直接当成JS使用。
     <div class="post-content-preview">
       
 举例来说：
+
 操作浏览器要使用window对象
 操作网页要使用document对象
 操作控制台要使用console对象
 
 
 
-一切操作都要通过对象，也就是所谓的面向对象，那么对象到底是什么呢？这就要先说到程序是什么，计算机程序的本质就是对现实事物的抽象，抽象的反义词是具体，比如：照片是对一个具体的人的抽象，汽车模型是对具体汽车的抽象等等。程序也是对事物的抽象，在程序中我们可以表示一个人、一条......
+一切操作都要通过对象，也就是所谓的面向对象，那么对象到底是什么呢？这就要先说到程序是什么，计算机程序的本质就是对现实事物的抽象，抽象的反义词是具体，比如：照片是对一个具体的人的抽象，汽车模型是对具体汽车的抽象等等。程序也是对事物的抽象，在程序中我们可以表示一个人、一......
     </div>
   </a>
   
@@ -608,9 +612,11 @@ TS完全兼容JS，换言之，任何的JS代码都可以直接当成JS使用。
       
     </h3>
     <div class="post-content-preview">
-      keep-alive 的作用keep-alive是vue的内置组件，当它包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们。keep-alive 是一个抽象组件：它自身不会渲染成一个 DOM 元素，也不会出现在父组件链中。
+      keep-alive 的作用
+keep-alive是vue的内置组件，当它包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们。
+keep-alive 是一个抽象组件：它自身不会渲染成一个 DOM 元素，也不会出现在父组件链中。
 在组件切换过程中 把切换出去的组件保留在内存中，防止重复渲染DOM，减少加载时间及性能消耗，提高用户体验性。
-被包含在 keep-alive 中创建的组件，会多出两个......
+被包含在 keep-alive 中创建的组件，会多出......
     </div>
   </a>
   
@@ -644,13 +650,18 @@ TS完全兼容JS，换言之，任何的JS代码都可以直接当成JS使用。
     </h3>
     <div class="post-content-preview">
       Vue3快速上手
+
 1.Vue3简介
+
 2020年9月18日，Vue.js发布3.0版本，代号：One Piece（海贼王）
-耗时2年多、2600+次提交、30+个RFC、600+次PR、99位贡献者 
+耗时2年多、2600+次提交、30+个RFC、600+次PR、99位贡献者
 github上的tags地址：https://github.com/vuejs/vue-next/releases/tag/v3.0.0
 
-2.Vue3带来了什么1.性能的提升
-打包大小减少41......
+2.Vue3带来了什么
+1.性能的提升
+
+
+打包大小......
     </div>
   </a>
   
@@ -685,12 +696,14 @@ github上的tags地址：https://github.com/vuejs/vue-next/releases/tag/v3.0.0
     <div class="post-content-preview">
       
 关于不同版本的Vue
+
 vue.js与vue.runtime.xxx.js的区别：
+
 vue.js是完整版的Vue，包含：核心功能 + 模板解析器。
 vue.runtime.xxx.js是运行版的Vue，只包含：核心功能；没有模板解析器。
 
 
-因为vue.runtime.xxx.js没有模板解析器，所以不能使用template这个配置项，需要使用render函数接收到的createElemen......
+因为vue.runtime.xxx.js没有模板解析器，所以不能使用template这个配置项，需要使用render函数接收到的createElem......
     </div>
   </a>
   
@@ -724,10 +737,15 @@ vue.runtime.xxx.js是运行版的Vue，只包含：核心功能；没有模板�
     </h3>
     <div class="post-content-preview">
       一种可以达成任意组件间通信,类似于总线传值
-1.安装pubsub插件npm i pubsub-js
-2.在需要使用pubsub插件的组件中引入import pubsub from &#39;pubsub-js&#39;
+1.安装pubsub插件
+npm i pubsub-js
+2.在需要使用pubsub插件的组件中引入
+import pubsub from 'pubsub-js'
 3.进行使用
-传递数据的组件1234567891011121314151617181920212223242526272829303132&lt;template&gt;  ......
+
+传递数据的组件
+
+1234567891011121314151617181920212223242526272829303132&lt;template&gt;  &lt......
     </div>
   </a>
   
@@ -760,8 +778,10 @@ vue.runtime.xxx.js是运行版的Vue，只包含：核心功能；没有模板�
       
     </h3>
     <div class="post-content-preview">
-      vue是单向数据流,单向数据流就是从一个组件单方向将数据流向它的内部组件，也就是父组件的数据流向子组件中,但子组件不能将这个数据修改掉,如果返回到父组件中修改然后重新流向子组件，从而达到更新数据的原理图中可以看到，父组件向子组件传递数据的时候，子组件接收的这个数据是不能直接修改的，需要触发父组件的方法来修改这个数据，然后重新传递给子组件。
-props可以改,但是不推荐。如果props传递过来......
+      vue是单向数据流,单向数据流就是从一个组件单方向将数据流向它的内部组件，也就是父组件的数据流向子组件中,但子组件不能将这个数据修改掉,如果返回到父组件中修改然后重新流向子组件，从而达到更新数据的原理
+
+图中可以看到，父组件向子组件传递数据的时候，子组件接收的这个数据是不能直接修改的，需要触发父组件的方法来修改这个数据，然后重新传递给子组件。
+props可以改,但是不推荐。如果props传递......
     </div>
   </a>
   
@@ -794,9 +814,11 @@ props可以改,但是不推荐。如果props传递过来......
       
     </h3>
     <div class="post-content-preview">
-      1.全局安装事件总线main.js1234567new Vue(&#123;  render: h =&gt; h(App),  beforeCreate() &#123;    Vue.prototype.$bus = this;//安装全局事件总线,$bus就是当前应用的vm  &#125;&#125;).$mount(&#x27;#app&#x27;)2.使用时间总线
+      1.全局安装事件总线main.js
+1234567new Vue(&#123;  render: h =&gt; h(App),  beforeCreate() &#123;    Vue.prototype.$bus = this;//安装全局事件总线,$bus就是当前应用的vm  &#125;&#125;).$mount(&#x27;#app&#x27;)
+2.使用时间总线
 
-传递的组件12......
+传递的组件......
     </div>
   </a>
   
@@ -830,7 +852,12 @@ props可以改,但是不推荐。如果props传递过来......
     </h3>
     <div class="post-content-preview">
       
-computed和watch的区别1.computed能完成的功能,watch都可以完成。2.watch能完成的功能,computed不一定能完成,例如:watch可以进行异步操作(setTimeout).两个重要的小原则1.所被Vue管理的函数，最好写成普通函数，这样this的指向才是vm或组件实例对象。2.所有不被vue所管理的函数(定时器的回调函数、ajax的回调函数等、promis......
+computed和watch的区别
+1.computed能完成的功能,watch都可以完成。
+2.watch能完成的功能,computed不一定能完成,例如:watch可以进行异步操作(setTimeout).
+两个重要的小原则
+1.所被Vue管理的函数，最好写成普通函数，这样this的指向才是vm或组件实例对象。
+2.所有不被vue所管理的函数(定时器的回调函数、ajax的回调函数等、p......
     </div>
   </a>
   
@@ -1142,7 +1169,7 @@ computed和watch的区别1.computed能完成的功能,watch都可以完成。2.w
   <!-- Custom Theme JavaScript -->
   <script type="text/javascript" src="/js/hux-blog.min.js"></script>
   <!-- catalog -->
-  <script async="true" type="text/javascript" src="/blog/js/catalog.js"></script>
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
   <!-- totop(rocket) -->
   <script async="true" type="text/javascript" src="/js/totop.js"></script>
 
@@ -1222,7 +1249,7 @@ computed和watch的区别1.computed能完成的功能,watch都可以完成。2.w
 </script>
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
-https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+https://github.com/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
