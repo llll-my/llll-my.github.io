@@ -350,19 +350,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/tihuan/鲨鱼.jpeg');
-      --intro-header-background-image-url-post: url('/blog/img/header_img/tihuan.png');
-      --intro-header-background-image-url-page: url('//blog/img/header_img/tihuan.png');
+      --intro-header-background-image-url-post: url('img/header_img/tihuan.png');
+      --intro-header-background-image-url-page: url('/img/header_img/tihuan.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/tihuan/鲨鱼.jpeg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/blog/img/header_img/tihuan.png');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//blog/img/header_img/tihuan.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/tihuan.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tihuan.png');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('/blog/img/header_img/tihuan.png'); */
+        /* background-image: url('img/header_img/tihuan.png'); */
       
     }
 
@@ -406,7 +406,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              共 <span class="post-count">146</span> 字
+              共 <span class="post-count">145</span> 字
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -469,11 +469,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>vue.js是完整版的vue，包含：核心功能+模版解析器<br>
-vue.runtime.xxx.js是运行版的vue只包含：核心功能，没有模版解析器<br>
-vue.runtime.xxx.js体积更小！<br>
-因为vue.runtime.xxx.js没有模版解析器,所以不能使用template配置项,需要使用render函数接收到的createElement函数去指定具体内容</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建Vue实例对象-vm</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el:<span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    <span class="comment">// 将APP组件放入容器</span></span><br><span class="line">    <span class="comment">// render是个函数，vue帮调</span></span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App),</span><br><span class="line">  <span class="comment">// template:`&lt;p&gt;123&lt;/p&gt;`</span></span><br><span class="line">  <span class="comment">// components:&#123;App&#125;,//完整版可用</span></span><br><span class="line">  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+        <p>vue.js是完整版的vue，包含：核心功能+模版解析器<br>vue.runtime.xxx.js是运行版的vue只包含：核心功能，没有模版解析器<br>vue.runtime.xxx.js体积更小！<br>因为vue.runtime.xxx.js没有模版解析器,所以不能使用template配置项,需要使用render函数接收到的createElement函数去指定具体内容<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建Vue实例对象-vm</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el:<span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    <span class="comment">// 将APP组件放入容器</span></span><br><span class="line">    <span class="comment">// render是个函数，vue帮调</span></span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App),</span><br><span class="line">  <span class="comment">// template:`&lt;p&gt;123&lt;/p&gt;`</span></span><br><span class="line">  <span class="comment">// components:&#123;App&#125;,//完整版可用</span></span><br><span class="line">  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 
 
         <hr>
