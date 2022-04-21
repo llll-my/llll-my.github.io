@@ -234,9 +234,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              关于
+              归档
               
               
             </a>
@@ -256,20 +256,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/tags/">
-              
-              标签
+              关于
               
               
             </a>
@@ -281,6 +270,17 @@
             <a href="/favorites/">
               
               收藏夹
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -511,117 +511,6 @@ computed和watch的区别
   <!-- top end -->
   
 
-  <a href="/2022/02/11/vue.js与vue.runtime.xxx.js的区别/">
-    <h2 class="post-title">
-      vue.js与vue.runtime.xxx.js的区别
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      vue.js是完整版的vue，包含：核心功能+模版解析器
-vue.runtime.xxx.js是运行版的vue只包含：核心功能，没有模版解析器
-vue.runtime.xxx.js体积更小！
-因为vue.runtime.xxx.js没有模版解析器,所以不能使用template配置项,需要使用render函数接收到的createElement函数去指定具体内容
-12345678910// 创建......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    发表于
-    2022-02-11
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Vue" title="Vue">Vue</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2022/02/11/vue中组件的data为什么是一个函数/">
-    <h2 class="post-title">
-      vue中组件的data为什么是一个函数
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      组件是可复用的,一个组件被创建好之后,就可能被用在多个地方,组件不管复用多少次,组件中的data数据都应该是相互隔离的,互不影响，基于这一理念，组件每复用一次，data就复制一份,之后，当某一处复用的地方组件内data数据改变时，其他复用地方的组件data数据不受影响.
-
-https://www.cnblogs.com/wangjiachen666/p/9876266.html
-
-...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    发表于
-    2022-02-11
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Vue" title="Vue">Vue</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2022/02/11/vue中一个重要的内置关系/">
-    <h2 class="post-title">
-      vue中一个重要的内置关系
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      一个重要的内置关系：VueComponent.prototype.__proto__==Vue.prototype
-让组件实例（vc)可以访问到vue原型对象上的属性,方法。
-
-
-Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐式原型对象指向Object的原型对象，而是把它修改，指向了Vue的原型对象。这样就可以让组件实例对象（vc）可以访问到Vue原型对象上的属性，......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    发表于
-    2022-02-11
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Vue" title="Vue">Vue</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
   <a href="/2022/02/11/mixin混入/">
     <h2 class="post-title">
       mixin混入
@@ -696,17 +585,19 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
   <!-- top end -->
   
 
-  <a href="/2022/02/11/vue中关闭eslint语法/">
+  <a href="/2022/02/11/vue.js与vue.runtime.xxx.js的区别/">
     <h2 class="post-title">
-      vue中关闭eslint语法
+      vue.js与vue.runtime.xxx.js的区别
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      在根目录创建vue.config.js
-123module.exports = &#123;  lintOnSave:false,//关闭语法检查&#125;
-...
+      vue.js是完整版的vue，包含：核心功能+模版解析器
+vue.runtime.xxx.js是运行版的vue只包含：核心功能，没有模版解析器
+vue.runtime.xxx.js体积更小！
+因为vue.runtime.xxx.js没有模版解析器,所以不能使用template配置项,需要使用render函数接收到的createElement函数去指定具体内容
+12345678910// 创建......
     </div>
   </a>
   
@@ -767,6 +658,41 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
   <!-- top end -->
   
 
+  <a href="/2022/02/11/vue中关闭eslint语法/">
+    <h2 class="post-title">
+      vue中关闭eslint语法
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      在根目录创建vue.config.js
+123module.exports = &#123;  lintOnSave:false,//关闭语法检查&#125;
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-11
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/2022/02/11/vue通过子向父传值(组件自定义事件)/">
     <h2 class="post-title">
       vue通过子向父传值(组件自定义事件)
@@ -778,6 +704,80 @@ Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐�
       第一种:父组件给子组件传递函数类型的props实现
 父组件
 12345678910111213141516171819202122232425&lt;template&gt;  &lt;div id=&quot;root&quot;&gt;    &lt;School :add = &quot;add&quot; /&gt;    &lt;Student /&gt;  &lt;/div&gt......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-11
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2022/02/11/vue中一个重要的内置关系/">
+    <h2 class="post-title">
+      vue中一个重要的内置关系
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      一个重要的内置关系：VueComponent.prototype.__proto__==Vue.prototype
+让组件实例（vc)可以访问到vue原型对象上的属性,方法。
+
+
+Vue团队并没有让组件（VueComponent构造函数）的原型对象的隐式原型对象指向Object的原型对象，而是把它修改，指向了Vue的原型对象。这样就可以让组件实例对象（vc）可以访问到Vue原型对象上的属性，......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    发表于
+    2022-02-11
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Vue" title="Vue">Vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2022/02/11/vue中组件的data为什么是一个函数/">
+    <h2 class="post-title">
+      vue中组件的data为什么是一个函数
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      组件是可复用的,一个组件被创建好之后,就可能被用在多个地方,组件不管复用多少次,组件中的data数据都应该是相互隔离的,互不影响，基于这一理念，组件每复用一次，data就复制一份,之后，当某一处复用的地方组件内data数据改变时，其他复用地方的组件data数据不受影响.
+
+https://www.cnblogs.com/wangjiachen666/p/9876266.html
+
+...
     </div>
   </a>
   
@@ -890,6 +890,14 @@ ht......
     
     
     
+    <a href="/tags/#Ts" title="Ts" rel="2">Ts</a>
+    
+    
+    
+    <a href="/tags/#Vue3" title="Vue3" rel="1">Vue3</a>
+    
+    
+    
     <a href="/tags/#Js" title="Js" rel="2">Js</a>
     
     
@@ -899,14 +907,6 @@ ht......
     
     
     <a href="/tags/#Git" title="Git" rel="1">Git</a>
-    
-    
-    
-    <a href="/tags/#Vue3" title="Vue3" rel="1">Vue3</a>
-    
-    
-    
-    <a href="/tags/#Ts" title="Ts" rel="2">Ts</a>
     
     
   </div>
@@ -955,12 +955,12 @@ ht......
 <div class="widget">
   <ul>
     
-    <a href="../../2022/03/20/ts%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
-      <li>ts入门笔记</li>
-    </a>
-    
     <a href="../../2022/03/20/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
       <li>面向对象</li>
+    </a>
+    
+    <a href="../../2022/03/20/ts%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
+      <li>ts入门笔记</li>
     </a>
     
     <a href="../../2022/03/09/keep-alive%E7%9A%84%E4%BD%9C%E7%94%A8%E5%8F%8A%E7%94%A8%E6%B3%95/">
@@ -1013,6 +1013,14 @@ ht......
       <li>Vue</li>
     </a>
     
+    <a href="/categories/#Ts">
+      <li>Ts</li>
+    </a>
+    
+    <a href="/categories/#Vue3">
+      <li>Vue3</li>
+    </a>
+    
     <a href="/categories/#Js">
       <li>Js</li>
     </a>
@@ -1027,14 +1035,6 @@ ht......
     
     <a href="/categories/#Git">
       <li>Git</li>
-    </a>
-    
-    <a href="/categories/#Vue3">
-      <li>Vue3</li>
-    </a>
-    
-    <a href="/categories/#Ts">
-      <li>Ts</li>
     </a>
     
   </ul>

@@ -234,9 +234,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              关于
+              归档
               
               
             </a>
@@ -256,20 +256,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/tags/">
-              
-              标签
+              关于
               
               
             </a>
@@ -281,6 +270,17 @@
             <a href="/favorites/">
               
               收藏夹
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -522,22 +522,24 @@ Object.prototype.toString.call()
   <!-- top end -->
   
 
-  <a href="/2022/03/20/ts入门笔记/">
+  <a href="/2022/03/20/面向对象/">
     <h2 class="post-title">
-      ts入门笔记
+      面向对象
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      第一章 快速入门
-0、TypeScript简介
+      
+举例来说：
 
-TypeScript是JavaScript的超集。
-它对JS进行了扩展，向JS中引入了类型的概念，并添加了许多新的特性。
-TS代码需要通过编译器编译为JS，然后再交由JS解析器执行。
-TS完全兼容JS，换言之，任何的JS代码都可以直接当成JS使用。
-相较于JS而言，TS拥有了静态类型，更加严格的语法，更强大的功能；TS可以在代码执行前就完成代......
+操作浏览器要使用window对象
+操作网页要使用document对象
+操作控制台要使用console对象
+
+
+
+一切操作都要通过对象，也就是所谓的面向对象，那么对象到底是什么呢？这就要先说到程序是什么，计算机程序的本质就是对现实事物的抽象，抽象的反义词是具体，比如：照片是对一个具体的人的抽象，汽车模型是对具体汽车的抽象等等。程序也是对事物的抽象，在程序中我们可以表示一个人、一......
     </div>
   </a>
   
@@ -562,24 +564,22 @@ TS完全兼容JS，换言之，任何的JS代码都可以直接当成JS使用。
   <!-- top end -->
   
 
-  <a href="/2022/03/20/面向对象/">
+  <a href="/2022/03/20/ts入门笔记/">
     <h2 class="post-title">
-      面向对象
+      ts入门笔记
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-举例来说：
+      第一章 快速入门
+0、TypeScript简介
 
-操作浏览器要使用window对象
-操作网页要使用document对象
-操作控制台要使用console对象
-
-
-
-一切操作都要通过对象，也就是所谓的面向对象，那么对象到底是什么呢？这就要先说到程序是什么，计算机程序的本质就是对现实事物的抽象，抽象的反义词是具体，比如：照片是对一个具体的人的抽象，汽车模型是对具体汽车的抽象等等。程序也是对事物的抽象，在程序中我们可以表示一个人、一......
+TypeScript是JavaScript的超集。
+它对JS进行了扩展，向JS中引入了类型的概念，并添加了许多新的特性。
+TS代码需要通过编译器编译为JS，然后再交由JS解析器执行。
+TS完全兼容JS，换言之，任何的JS代码都可以直接当成JS使用。
+相较于JS而言，TS拥有了静态类型，更加严格的语法，更强大的功能；TS可以在代码执行前就完成代......
     </div>
   </a>
   
@@ -806,19 +806,16 @@ props可以改,但是不推荐。如果props传递......
   <!-- top end -->
   
 
-  <a href="/2022/02/24/任意组件间通信/">
+  <a href="/2022/02/24/vue中sync的作用/">
     <h2 class="post-title">
-      任意组件间通信
+      vue中sync的作用
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      1.全局安装事件总线main.js
-1234567new Vue(&#123;  render: h =&gt; h(App),  beforeCreate() &#123;    Vue.prototype.$bus = this;//安装全局事件总线,$bus就是当前应用的vm  &#125;&#125;).$mount(&#x27;#app&#x27;)
-2.使用时间总线
-
-传递的组件......
+      https://www.cnblogs.com/IwishIcould/archive/2021/10/25/15460427.html
+...
     </div>
   </a>
   
@@ -843,16 +840,19 @@ props可以改,但是不推荐。如果props传递......
   <!-- top end -->
   
 
-  <a href="/2022/02/24/vue中sync的作用/">
+  <a href="/2022/02/24/任意组件间通信/">
     <h2 class="post-title">
-      vue中sync的作用
+      任意组件间通信
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      https://www.cnblogs.com/IwishIcould/archive/2021/10/25/15460427.html
-...
+      1.全局安装事件总线main.js
+1234567new Vue(&#123;  render: h =&gt; h(App),  beforeCreate() &#123;    Vue.prototype.$bus = this;//安装全局事件总线,$bus就是当前应用的vm  &#125;&#125;).$mount(&#x27;#app&#x27;)
+2.使用时间总线
+
+传递的组件......
     </div>
   </a>
   
@@ -922,6 +922,14 @@ props可以改,但是不推荐。如果props传递......
     
     
     
+    <a href="/tags/#Ts" title="Ts" rel="2">Ts</a>
+    
+    
+    
+    <a href="/tags/#Vue3" title="Vue3" rel="1">Vue3</a>
+    
+    
+    
     <a href="/tags/#Js" title="Js" rel="2">Js</a>
     
     
@@ -931,14 +939,6 @@ props可以改,但是不推荐。如果props传递......
     
     
     <a href="/tags/#Git" title="Git" rel="1">Git</a>
-    
-    
-    
-    <a href="/tags/#Vue3" title="Vue3" rel="1">Vue3</a>
-    
-    
-    
-    <a href="/tags/#Ts" title="Ts" rel="2">Ts</a>
     
     
   </div>
@@ -987,12 +987,12 @@ props可以改,但是不推荐。如果props传递......
 <div class="widget">
   <ul>
     
-    <a href="2022/03/20/ts%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
-      <li>ts入门笔记</li>
-    </a>
-    
     <a href="2022/03/20/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
       <li>面向对象</li>
+    </a>
+    
+    <a href="2022/03/20/ts%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
+      <li>ts入门笔记</li>
     </a>
     
     <a href="2022/03/09/keep-alive%E7%9A%84%E4%BD%9C%E7%94%A8%E5%8F%8A%E7%94%A8%E6%B3%95/">
@@ -1045,6 +1045,14 @@ props可以改,但是不推荐。如果props传递......
       <li>Vue</li>
     </a>
     
+    <a href="/categories/#Ts">
+      <li>Ts</li>
+    </a>
+    
+    <a href="/categories/#Vue3">
+      <li>Vue3</li>
+    </a>
+    
     <a href="/categories/#Js">
       <li>Js</li>
     </a>
@@ -1059,14 +1067,6 @@ props可以改,但是不推荐。如果props传递......
     
     <a href="/categories/#Git">
       <li>Git</li>
-    </a>
-    
-    <a href="/categories/#Vue3">
-      <li>Vue3</li>
-    </a>
-    
-    <a href="/categories/#Ts">
-      <li>Ts</li>
     </a>
     
   </ul>
